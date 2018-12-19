@@ -11,6 +11,9 @@
     <packaging>jar</packaging>
     <name>Cucumber-JVM: JUnit</name>
 
+<properties>
+    <skip.assembly>false</skip.assembly>
+</properties>
     <dependencies>
         <dependency>
             <groupId>io.cucumber</groupId>
