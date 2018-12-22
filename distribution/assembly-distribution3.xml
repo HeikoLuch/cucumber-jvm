@@ -10,8 +10,8 @@
     <dependencySet>
           <useProjectArtifact>false</useProjectArtifact>
           <useTransitiveDependencies>true</useTransitiveDependencies>
-          <outputDirectory>/</outputDirectory>
-          <unpack>true</unpack>
+          <outputDirectory>lib</outputDirectory>
+          <unpack>false</unpack>
           <excludes>
             <exclude>${project.groupId}:*:*</exclude>
           </excludes>
@@ -21,8 +21,8 @@
     <moduleSet>
       <useAllReactorProjects>true</useAllReactorProjects>
       <binaries>
-        <outputDirectory>/</outputDirectory>
-        <unpack>true</unpack>
+        <outputDirectory>modules/${artifactId}</outputDirectory>
+        <unpack>false</unpack>
       </binaries>
     </moduleSet>
   </moduleSets>

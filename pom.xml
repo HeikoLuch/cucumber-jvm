@@ -83,9 +83,6 @@
         <typetools.version>0.5.0</typetools.version>
         <cucumber-expressions.version>6.2.0</cucumber-expressions.version>
         <datatable.version>1.1.7</datatable.version>
-        
-     
-    <skip.assembly>true</skip.assembly>
 
     </properties>
     <scm>
@@ -576,16 +573,6 @@
     <build>
         <pluginManagement>
             <plugins>
-			    <plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-assembly-plugin</artifactId>
-					<version>3.0.1</version>
-					<configuration>
-						<descriptors>
-							<descriptor>assembly.xml</descriptor>
-						</descriptors>
-					</configuration>
-				</plugin>
                 <!-- Standard plugins - alphabetically -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -723,28 +710,6 @@
                     </execution>
                 </executions>
             </plugin>
-			
-			     
-	  		<plugin>
-            <artifactId>maven-assembly-plugin</artifactId>
-            <version>2.6</version>
-            <configuration>
-                <descriptorRefs>
-                    <descriptorRef>jar-with-dependencies</descriptorRef>
-                </descriptorRefs>
-                <skipAssembly>${skip.assembly}</skipAssembly>
-            </configuration>
-            <executions>
-                <execution>
-                    <id>make-assembly</id>
-                    <phase>package</phase>
-                    <goals>
-                        <goal>single</goal>
-                    </goals>
-                </execution>
-            </executions>
-            </plugin>
         </plugins>
-
     </build>
 </project>

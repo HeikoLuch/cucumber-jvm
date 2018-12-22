@@ -84,10 +84,6 @@
 
     </dependencies>
 
-<properties>
-    <skip.assembly>false</skip.assembly>
-</properties>
-
     <build>
 		
         <resources>

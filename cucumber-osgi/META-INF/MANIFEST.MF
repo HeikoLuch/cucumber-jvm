@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Cucumber-OSGI Plugin
+Bundle-SymbolicName: cucumber-osgi
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: cucumber_osgi.Activator
+Bundle-Vendor: Avenqo GmbH, Germany
+Require-Bundle: org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: cucumber-osgi
+Bundle-ActivationPolicy: lazy
