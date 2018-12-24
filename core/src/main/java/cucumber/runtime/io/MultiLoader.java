@@ -16,6 +16,7 @@ public class MultiLoader implements ResourceLoader {
 
     @Override
     public Iterable<Resource> resources(String path, String suffix) {
+    	// i.e. classpath:com/avenqo/cucumber/example/appl/swtbot/runner
         if (isClasspathPath(path)) {
             return classpath.resources(stripClasspathPrefix(path), suffix);
         } else {

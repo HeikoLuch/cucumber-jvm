@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: cucumber-junit
+Bundle-SymbolicName: io.cucumber.junit
+Bundle-Version: 4.2.1.qualifier
+Export-Package: cucumber.annotation,
+ cucumber.api.junit,
+ cucumber.runtime.junit,
+ cucumber.runtime.stub
+Require-Bundle: org.junit;bundle-version="4.12.0",
+ io.cucumber.core;bundle-version="4.2.1"

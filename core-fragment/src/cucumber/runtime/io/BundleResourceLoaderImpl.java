@@ -33,8 +33,9 @@ public class BundleResourceLoaderImpl extends BundleResourceLoader {
 			Bundle[] bundles = bc.getBundles();
 			for (Bundle bundle : bundles) {
 				String symbolicName = bundle.getSymbolicName();
-				if (symbolicName.contains("cucumber") || symbolicName.startsWith("com.avenqo.pep.appl.ui.test")) {
-
+				//if (symbolicName.startsWith("com.avenqo.cucumber.example.appl.swtbot")) {
+			    {	
+			    	System.out.println(symbolicName);
 					//printBundleInfo1(bundle);
 					//printBundleState(bundle);
 

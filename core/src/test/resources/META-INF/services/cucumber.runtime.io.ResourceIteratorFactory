@@ -1,1 +1,2 @@
 cucumber.runtime.io.TestResourceIteratorFactory
+cucumber.runtime.io.BundleResourceIteratorFactory

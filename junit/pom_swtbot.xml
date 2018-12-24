@@ -43,7 +43,7 @@
 				<configuration>
 					<instructions>
 						<Export-Package>cucumber.api.*</Export-Package>
-						<Import-Package>gherkin,junit.framework,org.junit.*,org.hamcrest,cucumber.*,io.cucumber.*</Import-Package>
+						<Import-Package>cucumber.api.formatter,gherkin,junit.framework,org.junit.*,org.hamcrest,cucumber.*,io.cucumber.*</Import-Package>
 					</instructions>
 				</configuration>
 			</plugin>

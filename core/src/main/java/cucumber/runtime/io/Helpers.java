@@ -10,13 +10,13 @@ import java.net.URL;
 
 public class Helpers {
 	
-	// -----------------------------------------------
-	private static final BundleFileLocator IMPL;
-	static {
-		//try to load class FactoryDateTimeImpl from fragment
-		IMPL = (BundleFileLocator) ImplementationLoader.newInstance (BundleFileLocator.class);
-	}
-	// --------------------------------------------------
+//	// -----------------------------------------------
+//	private static final BundleFileLocator IMPL;
+//	static {
+//		//try to load class FactoryDateTimeImpl from fragment
+//		IMPL = (BundleFileLocator) ImplementationLoader.newInstance (BundleFileLocator.class);
+//	}
+//	// --------------------------------------------------
 	
 	private Helpers() {
 	}
@@ -31,7 +31,7 @@ public class Helpers {
 		//Added implementation vor OSGI environment
 		if ("bundleresource".equals(fileUrl.getProtocol())
 				|| "bundleentry".equals(fileUrl.getProtocol())) {
-			System.out.println("Hallo Heiko 1 - starting OSGI variant");
+			//System.out.println("Hallo Heiko 1 - starting OSGI variant");
 			String s = IMPL.getAbsolutePathAsString(fileUrl);
 			return s;
 		} else {	//The original implementation

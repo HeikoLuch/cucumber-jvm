@@ -240,7 +240,7 @@
 				<configuration>
 					<instructions>
 						<Export-Package>cucumber.runtime.*,cucumber.runner.*,cucumber.api.*,io.cucumber.*,cucumber.api.formatter.*</Export-Package>
-						<Import-Package>cucumber.runtime.*,cucumber.runner.*,cucumber.api.*,io.cucumber.*,cucumber.api.formatter.*,gherkin,org.*</Import-Package>
+						<Import-Package>cucumber.runtime.*,cucumber.runner.*,cucumber.api.*,io.cucumber.*,gherkin.*,org.*,io.cucumber.cucumberexpressions.*</Import-Package>
 					</instructions>
 				</configuration>
 			</plugin>

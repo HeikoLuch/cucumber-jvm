@@ -15,6 +15,9 @@ public class ResourceLoaderClassFinder implements ClassFinder {
         this.classLoader = classLoader;
     }
 
+    /* (non-Javadoc)
+     * @see cucumber.runtime.ClassFinder#getDescendants(java.lang.Class, java.lang.String)
+     */
     @Override
     public <T> Collection<Class<? extends T>> getDescendants(Class<T> parentType, String packageName) {
         Collection<Class<? extends T>> result = new HashSet<Class<? extends T>>();
