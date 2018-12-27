@@ -13,14 +13,15 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.wiring.BundleRevision;
 import org.osgi.framework.wiring.BundleWiring;
 
+import cucumber.runtime.CucumberException;
+
 public class BundleResource implements Resource {
 
 	private final URL url;
-	private final Bundle bundle;
+	
 
-	public BundleResource(Bundle b, URL u) {
+	public BundleResource( URL u) {
 		url = u;
-		bundle = b;
 	}
 
 	/* (non-Javadoc)
@@ -48,13 +49,18 @@ public class BundleResource implements Resource {
 	@Override
 	public String getClassName(String extension) {
 		
-		//TODO Sicheren Weg finden!
-		String s = getPath().replaceAll("/", ".");
-		if (s.startsWith(".bin.")) {
-			s = s.substring(5);
-		}
-		else if (s.startsWith(".")) {
-			s = s.substring(5);
+		//URL hostUrl = bundle.getResource("/");
+		if (!url.toString().startsWith("bundle"))
+			throw new CucumberException("Don't kno how to handle URL: " + url);
+		String p = url.getPath();
+		
+		String s = p.replaceAll("/", ".");
+		if (s.startsWith("."))
+			s = s.substring(1);
+		
+		if (s.endsWith(extension)) {
+			int index = s.lastIndexOf(extension);
+			s = s.substring(0,  index);
 		}
 		return s;
 		//Funz nicht in fragement

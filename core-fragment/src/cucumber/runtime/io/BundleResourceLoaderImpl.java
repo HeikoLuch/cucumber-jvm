@@ -21,7 +21,7 @@ public class BundleResourceLoaderImpl extends BundleResourceLoader {
 		try {
 
 			// Get this bundle and bundle context
-			Bundle currentBundle = org.osgi.framework.FrameworkUtil.getBundle(BundleResourceLoaderImpl.class);
+			Bundle currentBundle = org.osgi.framework.FrameworkUtil.getBundle(BundleResourceAccessor.class);
 			BundleContext bc = currentBundle.getBundleContext();
 			if (bc == null) {
 				currentBundle.start();

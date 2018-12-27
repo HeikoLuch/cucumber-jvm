@@ -8,25 +8,27 @@ import java.net.URL;
 import java.net.URLDecoder;
 import java.util.Enumeration;
 import java.util.Iterator;
-
+//TODO: Move to fragment
 public class ClasspathResourceIterable implements Iterable<Resource> {
+	
+	//Gibt entweder eine andere ResourceIteratorFactory zurück (java.lang.ServiceLoader) oder die Fallback-Variante.
 	private final ResourceIteratorFactory resourceIteratorFactory = new DelegatingResourceIteratorFactory(
-			new ZipThenFileResourceIteratorFactory());
+			new ZipThenFileResourceIteratorFactory()); //fallback
 
-	// ======== Determine implementation for Bundle Fragment =======
-	private static final BundleResourceLoader IMPL;
-	static {
-		// try to load class FactoryDateTimeImpl from fragment
-		IMPL = (BundleResourceLoader) ImplementationLoader.newInstance(BundleResourceLoader.class);
-	}
-	// ======== END: Determine implementation for Bundle Fragment =======
+//	// ======== Determine implementation for Bundle Fragment =======
+//	private static final BundleResourceLoader IMPL;
+//	static {
+//		// try to load class FactoryDateTimeImpl from fragment
+//		IMPL = (BundleResourceLoader) ImplementationLoader.newInstance(BundleResourceLoader.class);
+//	}
+//	// ======== END: Determine implementation for Bundle Fragment =======
 
 	private final ClassLoader classLoader;
 	private final String path;
 	private final String suffix;
 
 	public ClasspathResourceIterable(ClassLoader classLoader, String path, String suffix) {
-		this.classLoader = classLoader;
+		this.classLoader = classLoader; //ignore in OSGI
 		this.path = path;
 		this.suffix = suffix;
 	}
@@ -35,13 +37,16 @@ public class ClasspathResourceIterable implements Iterable<Resource> {
 	public Iterator<Resource> iterator() {
 		try {
 			FlatteningIterator<Resource> iterator = new FlatteningIterator<Resource>();
+			//Original:
+			//Enumeration<URL> resources = classLoader.getResources(path);
+			//New:
+			Enumeration<URL> resources = new BundleResourceAccessor().getResources(path, suffix); 
 
-			Enumeration<URL> resources = (IMPL != null)
-					? IMPL.iteratorPushResources(path, suffix, resourceIteratorFactory)
-					: classLoader.getResources(path);
 
 			while (resources.hasMoreElements()) {
 				URL url = resources.nextElement();
+System.out.println("Investigating URL: " + url.toString());				
+				
 				//url: 		bundleentry://5.fwk1645547422/bin/com/avenqo/cucumber/example/appl/swtbot/runner/RunCukesTest.class
 				//path: 	com/avenqo/cucumber/example/appl/swtbot/runner
 				//suffix: 	.class
@@ -50,7 +55,7 @@ public class ClasspathResourceIterable implements Iterable<Resource> {
 			}
 
 			return iterator;
-		} catch (IOException e) {
+		} catch (Exception e) { 
 			throw new CucumberException(e);
 		}
 	}

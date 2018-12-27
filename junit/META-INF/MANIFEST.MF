@@ -8,4 +8,5 @@ Export-Package: cucumber.annotation,
  cucumber.runtime.junit,
  cucumber.runtime.stub
 Require-Bundle: org.junit;bundle-version="4.12.0",
- io.cucumber.core;bundle-version="4.2.1"
+ io.cucumber.core;bundle-version="4.2.1",
+ io.cucumber.gherkin;bundle-version="5.1.0"

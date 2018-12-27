@@ -6,11 +6,11 @@ import java.io.File;
 import java.util.Collection;
 import java.util.HashSet;
 
-public class ResourceLoaderClassFinder implements ClassFinder {
+public class BundleResourceLoaderClassFinder implements ClassFinder {
     private final ResourceLoader resourceLoader;
     private final ClassLoader classLoader;
 
-    public ResourceLoaderClassFinder(ResourceLoader resourceLoader, ClassLoader classLoader) {
+    public BundleResourceLoaderClassFinder(ResourceLoader resourceLoader, ClassLoader classLoader) {
         this.resourceLoader = resourceLoader; //i.e. MultiLoader
         this.classLoader = classLoader; // i.e. EquinoxClassLoader
     }

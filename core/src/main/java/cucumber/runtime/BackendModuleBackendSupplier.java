@@ -52,11 +52,12 @@ public final class BackendModuleBackendSupplier implements BackendSupplier {
         //Wenn nichts gefunden wird, wird der DefaultTypeRegistryConfiguration zurückgegeben
         List<String> glue = runnerOptions.getGlue();
         
+        //TypeRegistryConfigurer is a class for registration of customer defined cucumber expressions
         TypeRegistryConfigurer typeRegistryConfigurer = reflections.instantiateExactlyOneSubclass(TypeRegistryConfigurer.class, MultiLoader.packageName(glue), new Class[0], new Object[0], new DefaultTypeRegistryConfiguration());
+        
         TypeRegistry typeRegistry = new TypeRegistry(typeRegistryConfigurer.locale());
         typeRegistryConfigurer.configureTypeRegistry(typeRegistry);
 
-        
         return reflections.instantiateSubclasses(Backend.class, packages, new Class[]{ResourceLoader.class, TypeRegistry.class}, new Object[]{resourceLoader, typeRegistry});
     }
 

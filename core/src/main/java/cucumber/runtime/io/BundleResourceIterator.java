@@ -15,84 +15,84 @@ import org.osgi.framework.BundleException;
 
 import cucumber.runtime.CucumberException;
 
-public class BundleResourceIterator implements Iterator<Resource>{
+/**
+ * Provides an iterator containing all resources of the the given url (bundle )
+ * matching path and suffix.
+ * 
+ * @author Heiko
+ *
+ */
+public class BundleResourceIterator implements Iterator<Resource> {
 
-	//private final Iterator<Resource> iterator;
+	// private final Iterator<Resource> iterator;
 	private final FlatteningIterator<Resource> flatteningIterator = new FlatteningIterator<Resource>();
 
-	
-    /**
-     * @param url i.e. bundleentry://5.fwk1645547422/bin/com/avenqo/cucumber/example/appl/swtbot/runner/RunCukesTest.class
-     * @param path i.e. com/avenqo/cucumber/example/appl/swtbot/runner
-     * @param suffix i.e. .class
-     */
-    public BundleResourceIterator(URL url, String path, String suffix) {
-    	// Get this bundle and bundle context
-    	Bundle currentBundle = org.osgi.framework.FrameworkUtil.getBundle(BundleResourceIterator.class);
-    	BundleContext bc = currentBundle.getBundleContext();
-    	if (bc == null) {  //try to start the bundle
-    		try {
-    			currentBundle.start();
-    			bc = currentBundle.getBundleContext();
-    		} catch (BundleException be) {
-    			throw new CucumberException("Bundle couldn't be started: " + currentBundle.getBundleId(), be);
-    		}
-    	}
-    	
-    	List<Resource> listResources = new ArrayList<Resource>();
-    	Bundle[] bundles = bc.getBundles();
-		for (Bundle bundle : bundles) {
+	/**
+	 * @param url    i.e.
+	 *               bundleentry://5.fwk1645547422/com/avenqo/cucumber/example/appl/swtbot/runner/RunCukesTest.class
+	 * @param path   ignored
+	 * @param suffix i.e. .class
+	 */
+	public BundleResourceIterator(URL url) {
+		List<Resource> listResources = new ArrayList<Resource>();
 		
-			Enumeration<URL> resources = findMatchingUrls(bundle, path, suffix);
-			if (resources != null) {
-				while (resources.hasMoreElements()) {
-					listResources.add( new BundleResource( bundle, resources.nextElement()));
-				}
+		BundleResourceAccessor bra = new BundleResourceAccessor();
+		/*
+		 * // Get this bundle and bundle context Bundle currentBundle =
+		 * org.osgi.framework.FrameworkUtil.getBundle(BundleResourceIterator.class);
+		 * BundleContext bc = currentBundle.getBundleContext(); if (bc == null) { // try
+		 * to start the bundle try { currentBundle.start(); bc =
+		 * currentBundle.getBundleContext(); } catch (BundleException be) { throw new
+		 * CucumberException("Bundle couldn't be started: " +
+		 * currentBundle.getBundleId(), be); } }
+		 * 
+		 * 
+		 * Bundle[] bundles = bc.getBundles(); for (Bundle bundle : bundles) {
+		 * 
+		 * Enumeration<URL> resources = BundleResourceAccessor.findMatchingUrls(bundle,
+		 * path, suffix); if (resources != null) { while (resources.hasMoreElements()) {
+		 * listResources.add(new BundleResource(bundle, resources.nextElement())); } } }
+		 */
+
+		Bundle bundle = bra.getBundle(url);
+
+		if (bundle != null) {
+			if (!bra.isFragment(bundle)) {
+				listResources.add(new BundleResource(url));
+				
+				
+//				Enumeration<URL> resources = BundleResourceAccessor.findMatchingUrls(bundle, path, suffix);
+//				if (resources != null) {
+//					while (resources.hasMoreElements()) {
+//						URL resource = resources.nextElement();
+//						listResources.add(new BundleResource(bundle, resource));
+//						try {
+//
+//							bundle.loadClass("/com/avenqo/cucumber/example/appl/swtbot/runner/RunCukesTest.class");
+//						} catch (ClassNotFoundException e) {
+//							// TODO Auto-generated catch block
+//							e.printStackTrace();
+//						}
+//					}
+//				}
 			}
-		}
+		} else
+			throw new CucumberException("No matching bundle found.");
 		flatteningIterator.push(listResources.iterator());
 	}
 
-    
-    private Enumeration<URL> findMatchingUrls(Bundle bundle, String path, String suffix) {
-		Vector<URL> resources = new Vector<URL>();
-
-		Enumeration<URL> urls = bundle.findEntries("/", "*" + suffix, true);
-		 //urls = bundle.findEntries("/", "*.class", true);
-		if (urls != null) {
-			while (urls.hasMoreElements()) {
-				URL url = urls.nextElement();
-
-				// Check if file is reslovable
-				if ((url != null) && url.toString().contains(path))
-					try {
-						String filepath = Helpers.filePath(url);
-						if (filepath != null) {
-							resources.add(url);
-						}
-
-					} catch (Throwable t) {
-						// Ignore this url
-						t.printStackTrace();
-					}
-			}
-		}
-
-		return resources.size() > 0 ? resources.elements() : null;
+	@Override
+	public boolean hasNext() {
+		return flatteningIterator.hasNext();
 	}
 
 	@Override
-    public boolean hasNext() {
-        return flatteningIterator.hasNext();
-    }
+	public Resource next() {
+		return flatteningIterator.next();
+	}
 
-    @Override
-    public Resource next() {
-       return flatteningIterator.next();
-    }
-
-    @Override
-    public void remove() {
-        throw new UnsupportedOperationException();
-    }
+	@Override
+	public void remove() {
+		throw new UnsupportedOperationException();
+	}
 }
