@@ -45,7 +45,7 @@ public class ClasspathResourceIterable implements Iterable<Resource> {
 
 			while (resources.hasMoreElements()) {
 				URL url = resources.nextElement();
-System.out.println("Investigating URL: " + url.toString());				
+//System.out.println("Investigating URL: " + url.toString());				
 				
 				//url: 		bundleentry://5.fwk1645547422/bin/com/avenqo/cucumber/example/appl/swtbot/runner/RunCukesTest.class
 				//path: 	com/avenqo/cucumber/example/appl/swtbot/runner

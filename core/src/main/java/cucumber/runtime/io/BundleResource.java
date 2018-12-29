@@ -18,10 +18,12 @@ import cucumber.runtime.CucumberException;
 public class BundleResource implements Resource {
 
 	private final URL url;
+	private Bundle bundle;
 	
 
-	public BundleResource( URL u) {
+	public BundleResource(Bundle b,  URL u) {
 		url = u;
+		bundle = b;
 	}
 
 	/* (non-Javadoc)
@@ -63,21 +65,12 @@ public class BundleResource implements Resource {
 			s = s.substring(0,  index);
 		}
 		return s;
-		//Funz nicht in fragement
-//		while (true) {
-//			try {
-//				bundle.loadClass(classname);
-//				return classname;
-//			} catch (ClassNotFoundException e) {
-//				// maybe located within a sub path?
-//				int pos = classname.indexOf(".");
-//				if (pos < 0)
-//					break;
-//				classname = classname.substring(++pos);
-//			}
-//		}
 
 
+	}
+
+	public Class<?> loadClass() throws ClassNotFoundException {
+		return bundle.loadClass(getClassName(".class"));
 	}
 
 }

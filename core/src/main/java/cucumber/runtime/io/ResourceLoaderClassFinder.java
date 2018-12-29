@@ -24,15 +24,25 @@ public class ResourceLoaderClassFinder implements ClassFinder {
         String packagePath = "classpath:" + packageName.replace('.', '/').replace(File.separatorChar, '/');
         for (Resource classResource : resourceLoader.resources(packagePath, ".class")) {
             String className = classResource.getClassName(".class");
-
+//TODO Remove
+if (className.contains("JavaBackend"))  {
+	int z=0;
+}           
             try {
-                Class<?> clazz = loadClass(className);
-                boolean b = parentType.equals(clazz);
-                boolean c = parentType.isAssignableFrom(clazz);
+            	 Class<?> clazz;
+            	if (classResource instanceof BundleResource) {
+            		clazz = ((BundleResource) classResource).loadClass();
+            	}
+            	else {
+            		clazz = loadClass(className);
+            	}
+                boolean a = !parentType.equals(clazz);
+                boolean b = parentType.isAssignableFrom(clazz);
                 if (clazz != null && !parentType.equals(clazz) && parentType.isAssignableFrom(clazz)) {
                     result.add(clazz.asSubclass(parentType));
                 }
             } catch (ClassNotFoundException ignore) {
+            	ignore.printStackTrace();
             } catch (NoClassDefFoundError ignore) {
             	ignore.printStackTrace();
             }
