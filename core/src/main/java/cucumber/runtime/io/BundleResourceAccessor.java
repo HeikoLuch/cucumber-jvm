@@ -1,14 +1,16 @@
 package cucumber.runtime.io;
 
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
+import java.util.Date;
 import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.Vector;
 
 import org.osgi.framework.Bundle;
@@ -17,6 +19,7 @@ import org.osgi.framework.BundleException;
 import org.osgi.framework.wiring.BundleRevision;
 import org.osgi.framework.wiring.BundleWiring;
 
+import cucumber.api.BundleProperties;
 import cucumber.runtime.CucumberException;
 
 /**
@@ -28,7 +31,42 @@ import cucumber.runtime.CucumberException;
  */
 public class BundleResourceAccessor {
 
-	private List<Bundle> alBundles = null;;
+	private List<Bundle> alBundles = null;
+
+	// --- Cache for bundle resources in context of suffix ---
+	public class CacheKey {
+		String bundleName;
+		String version;
+		String suffix;
+
+		CacheKey(Bundle bundle, String _suffix) {
+			bundleName = bundle.getSymbolicName();
+			version = bundle.getVersion().toString();
+			suffix = _suffix;
+		}
+
+		@Override
+		public boolean equals(Object other) {
+			if (other instanceof CacheKey) {
+				CacheKey otherKey = (CacheKey) other;
+				return bundleName.equals(otherKey.bundleName) && version.equals(otherKey.version)
+						&& suffix.equals(otherKey.suffix);
+			}
+			return false;
+		}
+
+		@Override
+		public int hashCode() {
+			int result = (bundleName != null ? bundleName.hashCode() : 0);
+			result = 31 * result + (version != null ? version.hashCode() : 0);
+			result = 31 * result + (suffix != null ? suffix.hashCode() : 0);
+			return result;
+
+		}
+	}
+
+	private static Map<CacheKey, Collection<String>> resourceCache;
+	// --- END: Cache for bundle resources in context of suffix ---
 
 	/**
 	 * @param clazz
@@ -49,6 +87,9 @@ public class BundleResourceAccessor {
 			be.printStackTrace(); // TODO: remove. is not necessary
 			throw new CucumberException(be);
 		}
+
+		if (resourceCache == null)
+			resourceCache = new HashMap<CacheKey, Collection<String>>();
 	}
 
 	public boolean isFragment(Bundle bundle) {
@@ -57,10 +98,15 @@ public class BundleResourceAccessor {
 	}
 
 	public Enumeration<URL> getResources(String path, String suffix) {
-
+//TODO remove
+long t1 = new Date().getTime();
 		Vector<URL> res = new Vector<URL>();
 
 		for (Bundle bundle : alBundles) {
+			
+			if (!isFilteredBundle(bundle))
+				continue;
+			
 			Enumeration<URL> resources = findMatchingUrls(bundle, path, suffix);
 			if (resources != null) {
 				while (resources.hasMoreElements()) {
@@ -70,7 +116,33 @@ public class BundleResourceAccessor {
 				}
 			}
 		}
+//TODO remove
+long t2 = new Date().getTime();
+System.out
+				.println("getResources() called; path=" + path + ", suffix=" + suffix + "; took " + (t2 - t1) + " ms");
 		return res.elements();
+	}
+
+	/**
+	 * Check if the bundle's name is part of the filter OR contains "cucumber".
+	 * @param bundle
+	 * @return True if the bundle name contains a filter string at least partially.
+	 */
+	private boolean isFilteredBundle(Bundle bundle) {
+		String prop = System.getProperty(BundleProperties.OSGI_BUNDLE_FILTER);
+		if (prop != null && prop.length() > 0) {
+			String name = bundle.getSymbolicName();
+			if (name.contains("cucumber"))
+				return true;
+			String[] strBundles = prop.split(",");
+			for (String s : strBundles) {
+				s = s.trim();
+				if (s.length()>0 && name.contains(s))
+					return true;
+			}						
+		}
+		else return true;
+		return false;
 	}
 
 	/**
@@ -83,14 +155,30 @@ public class BundleResourceAccessor {
 	 * @param suffix The found resources must end with this suffix.
 	 * @return
 	 */
-	public static Enumeration<URL> findMatchingUrls(Bundle bundle, String path, String suffix) {
+	public Enumeration<URL> findMatchingUrls(Bundle bundle, String path, String suffix) {
+
 		Vector<URL> vectorUrl = new Vector<URL>();
 		BundleWiring bundleWiring = bundle.adapt(BundleWiring.class);
 
 		// Getting all the matching files from classpath,; including imported packages
-		Collection<String> resources = bundleWiring.listResources("/", "*" + suffix,
-				BundleWiring.LISTRESOURCES_RECURSE);
+		Collection<String> resources = null;
+		/*
+		 * Set<String> keys = resourceCache.keySet(); int i = keys.size();
+		 * 
+		 * for (String s : keys) { Collection<String> o = resourceCache.get(s); o=null;
+		 * }
+		 */
 
+		CacheKey key = new CacheKey(bundle, suffix);
+		// String key = bundle.getSymbolicName();
+		if (resourceCache.containsKey(key))
+			resources = resourceCache.get(key);
+		else {
+
+			resources = bundleWiring.listResources("/", "*" + suffix, BundleWiring.LISTRESOURCES_RECURSE);
+			resourceCache.put(key, resources);
+
+		}
 		URL bundleUrl = bundle.getEntry("/");
 		for (String resource : resources) {
 			if (resource.toString().contains("$"))// ignore inner classes
