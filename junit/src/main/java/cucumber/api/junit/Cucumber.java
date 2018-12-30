@@ -25,7 +25,9 @@ import cucumber.runtime.io.ResourceLoaderClassFinder;
 import cucumber.runtime.junit.Assertions;
 import cucumber.runtime.junit.FeatureRunner;
 import cucumber.runtime.junit.JUnitOptions;
+import cucumber.runtime.junit.swtbot.ScreenshotCaptureNotifier;
 import cucumber.runtime.model.CucumberFeature;
+
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.ClassRule;
@@ -121,7 +123,12 @@ public class Cucumber extends ParentRunner<FeatureRunner> {
 
     @Override
     protected void runChild(FeatureRunner child, RunNotifier notifier) {
-        child.run(notifier);
+    	if (notifier instanceof ScreenshotCaptureNotifier) {
+    		child.run(notifier);
+		} else {
+			RunNotifier wrappedNotifier = new ScreenshotCaptureNotifier(notifier);
+			child.run(wrappedNotifier);
+		}  
     }
 
     @Override

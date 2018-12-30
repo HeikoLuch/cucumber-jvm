@@ -98,8 +98,6 @@ public class BundleResourceAccessor {
 	}
 
 	public Enumeration<URL> getResources(String path, String suffix) {
-//TODO remove
-long t1 = new Date().getTime();
 		Vector<URL> res = new Vector<URL>();
 
 		for (Bundle bundle : alBundles) {
@@ -116,10 +114,6 @@ long t1 = new Date().getTime();
 				}
 			}
 		}
-//TODO remove
-long t2 = new Date().getTime();
-System.out
-				.println("getResources() called; path=" + path + ", suffix=" + suffix + "; took " + (t2 - t1) + " ms");
 		return res.elements();
 	}
 
@@ -162,22 +156,13 @@ System.out
 
 		// Getting all the matching files from classpath,; including imported packages
 		Collection<String> resources = null;
-		/*
-		 * Set<String> keys = resourceCache.keySet(); int i = keys.size();
-		 * 
-		 * for (String s : keys) { Collection<String> o = resourceCache.get(s); o=null;
-		 * }
-		 */
-
 		CacheKey key = new CacheKey(bundle, suffix);
 		// String key = bundle.getSymbolicName();
 		if (resourceCache.containsKey(key))
 			resources = resourceCache.get(key);
 		else {
-
 			resources = bundleWiring.listResources("/", "*" + suffix, BundleWiring.LISTRESOURCES_RECURSE);
 			resourceCache.put(key, resources);
-
 		}
 		URL bundleUrl = bundle.getEntry("/");
 		for (String resource : resources) {
