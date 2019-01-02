@@ -1,4 +1,4 @@
-package cucumber.runtime.junit.swtbot;
+package cucumber.api.junit;
 
 
 import java.util.concurrent.atomic.AtomicBoolean;

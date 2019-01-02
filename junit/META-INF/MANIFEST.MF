@@ -11,3 +11,6 @@ Require-Bundle: org.junit;bundle-version="4.12.0",
  io.cucumber.core;bundle-version="4.2.1",
  io.cucumber.gherkin;bundle-version="5.1.0",
  org.eclipse.swtbot.junit4_x
+Bundle-ClassPath: patch.jar,
+ .
+Eclipse-ExtensibleAPI: true
