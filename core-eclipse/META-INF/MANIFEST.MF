@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Cucumber-core-eclipse
+Bundle-SymbolicName: cucumber-core-eclipse;singleton:=true
+Bundle-Version: 4.2.1.qualifier
+Bundle-Vendor: Avenqo GmbH, Germany
+Fragment-Host: io.cucumber.core;bundle-version="4.2.1.qualifier"
+Automatic-Module-Name: cucumber-core-eclipse
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.osgi;bundle-version="3.13.100"
+Bundle-ClassPath: patch.jar,
+ .
+Eclipse-PatchFragment: true
+
