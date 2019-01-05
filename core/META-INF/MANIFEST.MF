@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: io.cucumber.core
+Bundle-Name: Cucumber Core
 Bundle-SymbolicName: io.cucumber.core;singleton:=true
 Bundle-Version: 4.2.1.qualifier
 Export-Package: .,
@@ -29,5 +29,6 @@ Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: patch.jar,
  .
 Eclipse-ExtensibleAPI: true
+Bundle-Vendor: Avenqo GmbH, Germany
  
  

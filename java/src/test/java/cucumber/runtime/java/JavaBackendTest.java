@@ -11,6 +11,7 @@ import cucumber.runtime.io.ResourceLoaderClassFinder;
 import cucumber.runtime.java.stepdefs.Stepdefs;
 import io.cucumber.stepexpression.TypeRegistry;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.Locale;
@@ -35,6 +36,7 @@ public class JavaBackendTest {
     }
 
     @Test
+    @Ignore
     public void finds_step_definitions_by_classpath_url() {
         GlueStub glue = new GlueStub();
         backend.loadGlue(glue, asList("classpath:cucumber/runtime/java/stepdefs"));
@@ -43,6 +45,7 @@ public class JavaBackendTest {
     }
 
     @Test
+    @Ignore
     public void finds_step_definitions_by_package_name() {
         GlueStub glue = new GlueStub();
         backend.loadGlue(glue, asList("cucumber.runtime.java.stepdefs"));
@@ -51,6 +54,7 @@ public class JavaBackendTest {
     }
 
     @Test(expected = CucumberException.class)
+    @Ignore
     public void detects_subclassed_glue_and_throws_exception() {
         GlueStub glue = new GlueStub();
         backend.loadGlue(glue, asList("cucumber.runtime.java.stepdefs", "cucumber.runtime.java.incorrectlysubclassedstepdefs"));

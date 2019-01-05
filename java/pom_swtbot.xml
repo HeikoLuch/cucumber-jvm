@@ -1,59 +1,66 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>io.cucumber</groupId>
-        <artifactId>cucumber-jvm</artifactId>
-        <version>4.2.1-SNAPSHOT</version>
-    </parent>
+	<parent>
+		<groupId>io.cucumber</groupId>
+		<artifactId>cucumber-jvm</artifactId>
+		<version>4.2.1-SNAPSHOT</version>
+		<relativePath>../pom_swtbot.xml</relativePath>
+	</parent>
 
-    <artifactId>cucumber-java</artifactId>
-    <packaging>bundle</packaging>
-    <name>Cucumber-JVM: Java</name>
-<properties>
-    <skip.assembly>false</skip.assembly>
-</properties>
+	<artifactId>io.cucumber.java</artifactId>
+	<packaging>bundle</packaging>
+	<name>Cucumber-JVM: Java</name>
+	<properties>
+		<skip.assembly>false</skip.assembly>
+	</properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-core</artifactId>
-        </dependency>
+	<dependencies>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>io.cucumber.core</artifactId>
+			<version>${cucumber.version}</version>
+		</dependency>
 
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-junit</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+		<dependency>
+			<groupId>io.cucumber</groupId>
+			<artifactId>io.cucumber.junit</artifactId>
+			<version>${cucumber.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-antrun-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>generate-i18n-sources</id>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                        <phase>generate-sources</phase>
-                        <configuration>
-                            <target>
-                                <taskdef name="groovy" classname="org.codehaus.groovy.ant.Groovy" classpathref="maven.plugin.classpath" />
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>generate-i18n-sources</id>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<phase>generate-sources</phase>
+						<configuration>
+							<target>
+								<taskdef name="groovy"
+									classname="org.codehaus.groovy.ant.Groovy"
+									classpathref="maven.plugin.classpath" />
 
-                                <groovy><![CDATA[
+								<groovy><![CDATA[
 import groovy.text.SimpleTemplateEngine
 import gherkin.GherkinDialect
 import gherkin.GherkinDialectProvider
@@ -117,31 +124,31 @@ GherkinDialectProvider.DIALECTS.keySet().each { language ->
 }
         ]]></groovy>
 
-                            </target>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>build-helper-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>add-source</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>add-source</goal>
-                        </goals>
-                        <configuration>
-                            <sources>
-                                <source>${basedir}/target/generated-sources/i18n/java</source>
-                            </sources>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            
-            
+							</target>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>${basedir}/target/generated-sources/i18n/java</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
@@ -149,11 +156,11 @@ GherkinDialectProvider.DIALECTS.keySet().each { language ->
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<Export-Package>java.cucumber.*</Export-Package>
+						<Export-Package>java.cucumber.*,cucumber.api.*</Export-Package>
 
 					</instructions>
 				</configuration>
 			</plugin>
-        </plugins>
-    </build>
+		</plugins>
+	</build>
 </project>

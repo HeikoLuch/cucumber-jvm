@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: cucumber-junit
+Bundle-Name: Cucumber JUnit
 Bundle-SymbolicName: io.cucumber.junit
 Bundle-Version: 4.2.1.qualifier
 Export-Package: cucumber.annotation,
@@ -9,8 +9,9 @@ Export-Package: cucumber.annotation,
  cucumber.runtime.stub
 Require-Bundle: org.junit;bundle-version="4.12.0",
  io.cucumber.core;bundle-version="4.2.1",
- io.cucumber.gherkin;bundle-version="5.1.0",
- org.eclipse.swtbot.junit4_x
+ io.cucumber.gherkin;bundle-version="5.1.0"
 Bundle-ClassPath: patch.jar,
  .
 Eclipse-ExtensibleAPI: true
+Bundle-Vendor: Avenqo GmbH, Germany
+Import-Package: cucumber.runtime

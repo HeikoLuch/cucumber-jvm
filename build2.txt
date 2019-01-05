@@ -1,0 +1,1371 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 6 modules...
+[INFO] Installing Nexus Staging features:
+[INFO]   ... total of 6 executions of maven-deploy-plugin replaced with nexus-staging-maven-plugin
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Cucumber-JVM                                                       [pom]
+[INFO] Cucumber-JVM: Core                                              [bundle]
+[INFO] Cucumber-JVM: Core-Eclipse fragment                             [bundle]
+[INFO] Cucumber-JVM: JUnit                                             [bundle]
+[INFO] Cucumber-JVM: Java                                              [bundle]
+[INFO] Cucumber-JVM: JUnit Eclipse fragment                            [bundle]
+[INFO] 
+[INFO] ----------------------< io.cucumber:cucumber-jvm >----------------------
+[INFO] Building Cucumber-JVM 4.2.1-SNAPSHOT                               [1/6]
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ cucumber-jvm ---
+[INFO] Deleting C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce) @ cucumber-jvm ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (pre-unit-test) @ cucumber-jvm ---
+[INFO] surefireArgLine set to -javaagent:C:\\Users\\Heiko\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.2\\org.jacoco.agent-0.8.2-runtime.jar=destfile=C:\\projects\\src.2018.4\\cucumber-jvm-hko\\cucumber-jvm\\target\\coverage-reports\\jacoco-ut.exec
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:report (post-unit-test) @ cucumber-jvm ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- p2-maven-plugin:1.3.0:site (default-cli) @ cucumber-jvm ---
+[info] Resolving artifact=[io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.core.eclipse:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.core.eclipse-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] 	 [JAR] org.eclipse.osgi-3.13.100.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.java:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.java-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.junit.eclipse-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.junit-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] 	 [JAR] junit-4.12.jar
+[info] 	 [JAR] hamcrest-core-1.3.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.junit:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.junit-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] 	 [JAR] junit-4.12.jar
+[info] 	 [JAR] hamcrest-core-1.3.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.core.eclipse-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.java:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.java-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.junit.eclipse-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.junit:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.junit-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] cucumber-html-0.2.7.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] gherkin-5.1.0.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] tag-expressions-1.1.1.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] cucumber-expressions-6.2.0.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] datatable-1.1.7.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] datatable-dependencies-1.1.7.jar
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[info] Bundling Artifact io.cucumber:io.cucumber.core.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] org.eclipse.osgi-3.13.100.jar
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.junit-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[info] Bundling Artifact io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] junit-4.12.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] hamcrest-core-1.3.jar
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [junit-4.12.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [hamcrest-core-1.3.jar]
+[info] Resolved 0 features
+[INFO] Command line:
+	[C:\Program Files\Java\jdk1.8.0_152\jre\bin\java.exe, -jar, C:\Users\Heiko\.m2\repository\org\eclipse\tycho\tycho-bundles-external\1.0.0\eclipse\plugins\org.eclipse.equinox.launcher_1.3.201.v20161025-1711.jar, -configuration, C:\Users\Heiko\AppData\Local\Temp\tycho-p2-runtime5653825536572925428.tmp\configuration, -nosplash, -application, org.eclipse.equinox.p2.publisher.FeaturesAndBundlesPublisher, -artifactRepository, file:/C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/target/repository, -metadataRepository, file:/C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/target/repository, -publishArtifacts, -compress, -source, C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\target\source]
+Generating metadata for ..
+Generation completed with success [0 seconds].
+[INFO] Command line:
+	[C:\Program Files\Java\jdk1.8.0_152\jre\bin\java.exe, -jar, C:\Users\Heiko\.m2\repository\org\eclipse\tycho\tycho-bundles-external\1.0.0\eclipse\plugins\org.eclipse.equinox.launcher_1.3.201.v20161025-1711.jar, -configuration, C:\Users\Heiko\AppData\Local\Temp\tycho-p2-runtime3118962495288377270.tmp\configuration, -nosplash, -application, org.eclipse.equinox.p2.publisher.CategoryPublisher, -categoryDefinition, file:/C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\target\repository\category.xml, -metadataRepository, file:/C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\target\repository]
+Generating metadata for ..
+Generation completed with success [0 seconds].
+[INFO] 
+[INFO] --- maven-install-plugin:3.0.0-M1:install (default-install) @ cucumber-jvm ---
+[INFO] Installing C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\pom_swtbot.xml to C:\Users\Heiko\.m2\repository\io\cucumber\cucumber-jvm\4.2.1-SNAPSHOT\cucumber-jvm-4.2.1-SNAPSHOT.pom
+[INFO] 
+[INFO] --------------------< io.cucumber:io.cucumber.core >--------------------
+[INFO] Building Cucumber-JVM: Core 4.2.1-SNAPSHOT                         [2/6]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[WARNING] The POM for org.webbitserver:webbit-rest:jar:0.3.0 is invalid, transitive dependencies (if any) will not be available, enable debug logging for more details
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ io.cucumber.core ---
+[INFO] Deleting C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\core\target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce) @ io.cucumber.core ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (pre-unit-test) @ io.cucumber.core ---
+[INFO] surefireArgLine set to -javaagent:C:\\Users\\Heiko\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.2\\org.jacoco.agent-0.8.2-runtime.jar=destfile=C:\\projects\\src.2018.4\\cucumber-jvm-hko\\cucumber-jvm\\core\\target\\coverage-reports\\jacoco-ut.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ io.cucumber.core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 14 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ io.cucumber.core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 180 source files to C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\core\target\classes
+[INFO] /C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/core/src/main/java/cucumber/runtime/formatter/JSONFormatter.java: Some input files use unchecked or unsafe operations.
+[INFO] /C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/core/src/main/java/cucumber/runtime/formatter/JSONFormatter.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ io.cucumber.core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 16 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ io.cucumber.core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 78 source files to C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\core\target\test-classes
+[INFO] /C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/core/src/test/java/io/cucumber/stepexpression/StepExpressionFactoryTest.java: Some input files use unchecked or unsafe operations.
+[INFO] /C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/core/src/test/java/io/cucumber/stepexpression/StepExpressionFactoryTest.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.0:test (default-test) @ io.cucumber.core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:report (post-unit-test) @ io.cucumber.core ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- maven-bundle-plugin:4.1.0:bundle (default-bundle) @ io.cucumber.core ---
+[INFO] 
+[INFO] --- p2-maven-plugin:1.3.0:site (default-cli) @ io.cucumber.core ---
+[info] Resolving artifact=[io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.core.eclipse:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.core.eclipse-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] 	 [JAR] org.eclipse.osgi-3.13.100.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.java:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.java-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.junit.eclipse-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.junit-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] 	 [JAR] junit-4.12.jar
+[info] 	 [JAR] hamcrest-core-1.3.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.junit:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.junit-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] 	 [JAR] junit-4.12.jar
+[info] 	 [JAR] hamcrest-core-1.3.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.core.eclipse-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.java:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.java-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.junit.eclipse-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.junit:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.junit-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] cucumber-html-0.2.7.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] gherkin-5.1.0.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] tag-expressions-1.1.1.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] cucumber-expressions-6.2.0.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] datatable-1.1.7.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] datatable-dependencies-1.1.7.jar
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[info] Bundling Artifact io.cucumber:io.cucumber.core.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] org.eclipse.osgi-3.13.100.jar
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.junit-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[info] Bundling Artifact io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] junit-4.12.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] hamcrest-core-1.3.jar
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [junit-4.12.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [hamcrest-core-1.3.jar]
+[info] Resolved 0 features
+[INFO] Command line:
+	[C:\Program Files\Java\jdk1.8.0_152\jre\bin\java.exe, -jar, C:\Users\Heiko\.m2\repository\org\eclipse\tycho\tycho-bundles-external\1.0.0\eclipse\plugins\org.eclipse.equinox.launcher_1.3.201.v20161025-1711.jar, -configuration, C:\Users\Heiko\AppData\Local\Temp\tycho-p2-runtime16069993485655697.tmp\configuration, -nosplash, -application, org.eclipse.equinox.p2.publisher.FeaturesAndBundlesPublisher, -artifactRepository, file:/C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/core/target/repository, -metadataRepository, file:/C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/core/target/repository, -publishArtifacts, -compress, -source, C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\core\target\source]
+Generating metadata for ..
+Generation completed with success [0 seconds].
+[INFO] Command line:
+	[C:\Program Files\Java\jdk1.8.0_152\jre\bin\java.exe, -jar, C:\Users\Heiko\.m2\repository\org\eclipse\tycho\tycho-bundles-external\1.0.0\eclipse\plugins\org.eclipse.equinox.launcher_1.3.201.v20161025-1711.jar, -configuration, C:\Users\Heiko\AppData\Local\Temp\tycho-p2-runtime6222797953714590843.tmp\configuration, -nosplash, -application, org.eclipse.equinox.p2.publisher.CategoryPublisher, -categoryDefinition, file:/C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\core\target\repository\category.xml, -metadataRepository, file:/C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\core\target\repository]
+Generating metadata for ..
+Generation completed with success [0 seconds].
+[INFO] 
+[INFO] --- maven-install-plugin:3.0.0-M1:install (default-install) @ io.cucumber.core ---
+[INFO] Installing C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\core\target\io.cucumber.core-4.2.1-SNAPSHOT.jar to C:\Users\Heiko\.m2\repository\io\cucumber\io.cucumber.core\4.2.1-SNAPSHOT\io.cucumber.core-4.2.1-SNAPSHOT.jar
+[INFO] Installing C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\core\pom_swtbot.xml to C:\Users\Heiko\.m2\repository\io\cucumber\io.cucumber.core\4.2.1-SNAPSHOT\io.cucumber.core-4.2.1-SNAPSHOT.pom
+[INFO] 
+[INFO] --- maven-bundle-plugin:4.1.0:install (default-install) @ io.cucumber.core ---
+[INFO] Installing io/cucumber/io.cucumber.core/4.2.1-SNAPSHOT/io.cucumber.core-4.2.1-SNAPSHOT.jar
+[INFO] Writing OBR metadata
+[INFO] 
+[INFO] ----------------< io.cucumber:io.cucumber.core.eclipse >----------------
+[INFO] Building Cucumber-JVM: Core-Eclipse fragment 4.2.1-SNAPSHOT        [3/6]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ io.cucumber.core.eclipse ---
+[INFO] Deleting C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\core-eclipse\target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce) @ io.cucumber.core.eclipse ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (pre-unit-test) @ io.cucumber.core.eclipse ---
+[INFO] surefireArgLine set to -javaagent:C:\\Users\\Heiko\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.2\\org.jacoco.agent-0.8.2-runtime.jar=destfile=C:\\projects\\src.2018.4\\cucumber-jvm-hko\\cucumber-jvm\\core-eclipse\\target\\coverage-reports\\jacoco-ut.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ io.cucumber.core.eclipse ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\core-eclipse\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ io.cucumber.core.eclipse ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 8 source files to C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\core-eclipse\target\classes
+[INFO] /C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/core-eclipse/src/main/java/cucumber/runtime/io/ResourceLoaderClassFinder.java: Some input files use unchecked or unsafe operations.
+[INFO] /C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/core-eclipse/src/main/java/cucumber/runtime/io/ResourceLoaderClassFinder.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ io.cucumber.core.eclipse ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\core-eclipse\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ io.cucumber.core.eclipse ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.0:test (default-test) @ io.cucumber.core.eclipse ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:report (post-unit-test) @ io.cucumber.core.eclipse ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- maven-bundle-plugin:4.1.0:bundle (default-bundle) @ io.cucumber.core.eclipse ---
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:cucumber/runtime/io
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:., Jar:io.cucumber.core]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/databind/deser/std
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/databind/type
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/core/format
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/annotation
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/cucumberexpressions
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:cucumber-expressions]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/databind/introspect
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/core/type
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/databind/ser
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/databind/deser
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/databind/deser/impl
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/databind/jsonFormatVisitors
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/databind/ser/std
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/core/base
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/databind/module
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/databind/util
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/databind/jsontype
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/databind
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/databind/cfg
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/tagexpressions
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:tag-expressions]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/difflib
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/core/sym
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/databind/jsonschema
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/databind/node
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/core/io
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/databind/ser/impl
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/core/json/async
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/core
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/databind/jsontype/impl
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/core/async
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/core/json
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/databind/annotation
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/databind/ext
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/core/util
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/databind/exc
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/com/fasterxml/jackson/core/filter
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Split package, multiple jars provide the same package:io/cucumber/datatable/dependency/difflib/myers
+Use Import/Export Package directive -split-package:=(merge-first|merge-last|error|first) to get rid of this warning
+Package found in   [Jar:io.cucumber.core, Jar:datatable-dependencies]
+Class path         [Jar:., Jar:io.cucumber.core, Jar:cucumber-html, Jar:gherkin, Jar:tag-expressions, Jar:cucumber-expressions, Jar:datatable, Jar:datatable-dependencies, Jar:org.eclipse.osgi]
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Unused Export-Package instructions: [cucumber.api.formatter.*] 
+[WARNING] Bundle io.cucumber:io.cucumber.core.eclipse:bundle:4.2.1-SNAPSHOT : Unused Import-Package instructions: [io.cucumber.cucumberexpressions.*] 
+[INFO] 
+[INFO] --- p2-maven-plugin:1.3.0:site (default-cli) @ io.cucumber.core.eclipse ---
+[info] Resolving artifact=[io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.core.eclipse:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.core.eclipse-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] 	 [JAR] org.eclipse.osgi-3.13.100.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.java:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.java-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.junit.eclipse-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.junit-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] 	 [JAR] junit-4.12.jar
+[info] 	 [JAR] hamcrest-core-1.3.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.junit:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.junit-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] 	 [JAR] junit-4.12.jar
+[info] 	 [JAR] hamcrest-core-1.3.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.core.eclipse-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.java:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.java-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.junit.eclipse-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.junit:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.junit-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] cucumber-html-0.2.7.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] gherkin-5.1.0.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] tag-expressions-1.1.1.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] cucumber-expressions-6.2.0.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] datatable-1.1.7.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] datatable-dependencies-1.1.7.jar
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[info] Bundling Artifact io.cucumber:io.cucumber.core.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] org.eclipse.osgi-3.13.100.jar
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.junit-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[info] Bundling Artifact io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] junit-4.12.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] hamcrest-core-1.3.jar
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [junit-4.12.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [hamcrest-core-1.3.jar]
+[info] Resolved 0 features
+[INFO] Command line:
+	[C:\Program Files\Java\jdk1.8.0_152\jre\bin\java.exe, -jar, C:\Users\Heiko\.m2\repository\org\eclipse\tycho\tycho-bundles-external\1.0.0\eclipse\plugins\org.eclipse.equinox.launcher_1.3.201.v20161025-1711.jar, -configuration, C:\Users\Heiko\AppData\Local\Temp\tycho-p2-runtime7107513160272799223.tmp\configuration, -nosplash, -application, org.eclipse.equinox.p2.publisher.FeaturesAndBundlesPublisher, -artifactRepository, file:/C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/core-eclipse/target/repository, -metadataRepository, file:/C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/core-eclipse/target/repository, -publishArtifacts, -compress, -source, C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\core-eclipse\target\source]
+Generating metadata for ..
+Generation completed with success [0 seconds].
+[INFO] Command line:
+	[C:\Program Files\Java\jdk1.8.0_152\jre\bin\java.exe, -jar, C:\Users\Heiko\.m2\repository\org\eclipse\tycho\tycho-bundles-external\1.0.0\eclipse\plugins\org.eclipse.equinox.launcher_1.3.201.v20161025-1711.jar, -configuration, C:\Users\Heiko\AppData\Local\Temp\tycho-p2-runtime4091698902676983761.tmp\configuration, -nosplash, -application, org.eclipse.equinox.p2.publisher.CategoryPublisher, -categoryDefinition, file:/C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\core-eclipse\target\repository\category.xml, -metadataRepository, file:/C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\core-eclipse\target\repository]
+Generating metadata for ..
+Generation completed with success [0 seconds].
+[INFO] 
+[INFO] --- maven-install-plugin:3.0.0-M1:install (default-install) @ io.cucumber.core.eclipse ---
+[INFO] Installing C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\core-eclipse\target\io.cucumber.core.eclipse-4.2.1-SNAPSHOT.jar to C:\Users\Heiko\.m2\repository\io\cucumber\io.cucumber.core.eclipse\4.2.1-SNAPSHOT\io.cucumber.core.eclipse-4.2.1-SNAPSHOT.jar
+[INFO] Installing C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\core-eclipse\pom_swtbot.xml to C:\Users\Heiko\.m2\repository\io\cucumber\io.cucumber.core.eclipse\4.2.1-SNAPSHOT\io.cucumber.core.eclipse-4.2.1-SNAPSHOT.pom
+[INFO] 
+[INFO] --- maven-bundle-plugin:4.1.0:install (default-install) @ io.cucumber.core.eclipse ---
+[INFO] Installing io/cucumber/io.cucumber.core.eclipse/4.2.1-SNAPSHOT/io.cucumber.core.eclipse-4.2.1-SNAPSHOT.jar
+[INFO] Writing OBR metadata
+[INFO] 
+[INFO] -------------------< io.cucumber:io.cucumber.junit >--------------------
+[INFO] Building Cucumber-JVM: JUnit 4.2.1-SNAPSHOT                        [4/6]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ io.cucumber.junit ---
+[INFO] Deleting C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\junit\target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce) @ io.cucumber.junit ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (pre-unit-test) @ io.cucumber.junit ---
+[INFO] surefireArgLine set to -javaagent:C:\\Users\\Heiko\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.2\\org.jacoco.agent-0.8.2-runtime.jar=destfile=C:\\projects\\src.2018.4\\cucumber-jvm-hko\\cucumber-jvm\\junit\\target\\coverage-reports\\jacoco-ut.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ io.cucumber.junit ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ io.cucumber.junit ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 10 source files to C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\junit\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ io.cucumber.junit ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ io.cucumber.junit ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 13 source files to C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\junit\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.0:test (default-test) @ io.cucumber.junit ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running cucumber.runtime.junit.CucumberTest
+[WARNING] Tests run: 9, Failures: 0, Errors: 0, Skipped: 7, Time elapsed: 0.227 s - in cucumber.runtime.junit.CucumberTest
+[INFO] Running cucumber.runtime.junit.FeatureRunnerTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.868 s - in cucumber.runtime.junit.FeatureRunnerTest
+[INFO] Running cucumber.runtime.junit.JUnitReporterTest
+[INFO] Tests run: 24, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.518 s - in cucumber.runtime.junit.JUnitReporterTest
+[INFO] Running cucumber.runtime.junit.PickleRunnerWithNoStepDescriptionsTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.03 s - in cucumber.runtime.junit.PickleRunnerWithNoStepDescriptionsTest
+[INFO] Running cucumber.runtime.junit.PickleRunnerWithStepDescriptionsTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in cucumber.runtime.junit.PickleRunnerWithStepDescriptionsTest
+[INFO] Running cucumber.runtime.junit.RunCukesTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 s - in cucumber.runtime.junit.RunCukesTest
+[INFO] Running cucumber.runtime.junit.SanityTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.06 s - in cucumber.runtime.junit.SanityTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[WARNING] Tests run: 52, Failures: 0, Errors: 0, Skipped: 8
+[INFO] 
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:report (post-unit-test) @ io.cucumber.junit ---
+[INFO] Loading execution data file C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\junit\target\coverage-reports\jacoco-ut.exec
+[INFO] Analyzed bundle 'Cucumber-JVM: JUnit' with 22 classes
+[INFO] 
+[INFO] --- maven-bundle-plugin:4.1.0:bundle (default-bundle) @ io.cucumber.junit ---
+[WARNING] Bundle io.cucumber:io.cucumber.junit:bundle:4.2.1-SNAPSHOT : Export cucumber.api.junit,  has 1,  private references [cucumber.runtime.junit]
+[INFO] 
+[INFO] --- p2-maven-plugin:1.3.0:site (default-cli) @ io.cucumber.junit ---
+[info] Resolving artifact=[io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.core.eclipse:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.core.eclipse-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] 	 [JAR] org.eclipse.osgi-3.13.100.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.java:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.java-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.junit.eclipse-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.junit-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] 	 [JAR] junit-4.12.jar
+[info] 	 [JAR] hamcrest-core-1.3.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.junit:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.junit-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] 	 [JAR] junit-4.12.jar
+[info] 	 [JAR] hamcrest-core-1.3.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.core.eclipse-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.java:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.java-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.junit.eclipse-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.junit:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.junit-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] cucumber-html-0.2.7.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] gherkin-5.1.0.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] tag-expressions-1.1.1.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] cucumber-expressions-6.2.0.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] datatable-1.1.7.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] datatable-dependencies-1.1.7.jar
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[info] Bundling Artifact io.cucumber:io.cucumber.core.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] org.eclipse.osgi-3.13.100.jar
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.junit-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[info] Bundling Artifact io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] junit-4.12.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] hamcrest-core-1.3.jar
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [junit-4.12.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [hamcrest-core-1.3.jar]
+[info] Resolved 0 features
+[INFO] Command line:
+	[C:\Program Files\Java\jdk1.8.0_152\jre\bin\java.exe, -jar, C:\Users\Heiko\.m2\repository\org\eclipse\tycho\tycho-bundles-external\1.0.0\eclipse\plugins\org.eclipse.equinox.launcher_1.3.201.v20161025-1711.jar, -configuration, C:\Users\Heiko\AppData\Local\Temp\tycho-p2-runtime6034277392652721062.tmp\configuration, -nosplash, -application, org.eclipse.equinox.p2.publisher.FeaturesAndBundlesPublisher, -artifactRepository, file:/C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/junit/target/repository, -metadataRepository, file:/C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/junit/target/repository, -publishArtifacts, -compress, -source, C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\junit\target\source]
+Generating metadata for ..
+Generation completed with success [0 seconds].
+[INFO] Command line:
+	[C:\Program Files\Java\jdk1.8.0_152\jre\bin\java.exe, -jar, C:\Users\Heiko\.m2\repository\org\eclipse\tycho\tycho-bundles-external\1.0.0\eclipse\plugins\org.eclipse.equinox.launcher_1.3.201.v20161025-1711.jar, -configuration, C:\Users\Heiko\AppData\Local\Temp\tycho-p2-runtime6883741192603141882.tmp\configuration, -nosplash, -application, org.eclipse.equinox.p2.publisher.CategoryPublisher, -categoryDefinition, file:/C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\junit\target\repository\category.xml, -metadataRepository, file:/C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\junit\target\repository]
+Generating metadata for ..
+Generation completed with success [0 seconds].
+[INFO] 
+[INFO] --- maven-install-plugin:3.0.0-M1:install (default-install) @ io.cucumber.junit ---
+[INFO] Installing C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\junit\target\io.cucumber.junit-4.2.1-SNAPSHOT.jar to C:\Users\Heiko\.m2\repository\io\cucumber\io.cucumber.junit\4.2.1-SNAPSHOT\io.cucumber.junit-4.2.1-SNAPSHOT.jar
+[INFO] Installing C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\junit\pom_swtbot.xml to C:\Users\Heiko\.m2\repository\io\cucumber\io.cucumber.junit\4.2.1-SNAPSHOT\io.cucumber.junit-4.2.1-SNAPSHOT.pom
+[INFO] 
+[INFO] --- maven-bundle-plugin:4.1.0:install (default-install) @ io.cucumber.junit ---
+[INFO] Installing io/cucumber/io.cucumber.junit/4.2.1-SNAPSHOT/io.cucumber.junit-4.2.1-SNAPSHOT.jar
+[INFO] Writing OBR metadata
+[INFO] 
+[INFO] --------------------< io.cucumber:io.cucumber.java >--------------------
+[INFO] Building Cucumber-JVM: Java 4.2.1-SNAPSHOT                         [5/6]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ io.cucumber.java ---
+[INFO] Deleting C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\java\target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce) @ io.cucumber.java ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (pre-unit-test) @ io.cucumber.java ---
+[INFO] surefireArgLine set to -javaagent:C:\\Users\\Heiko\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.2\\org.jacoco.agent-0.8.2-runtime.jar=destfile=C:\\projects\\src.2018.4\\cucumber-jvm-hko\\cucumber-jvm\\java\\target\\coverage-reports\\jacoco-ut.exec
+[INFO] 
+[INFO] --- maven-antrun-plugin:1.8:run (generate-i18n-sources) @ io.cucumber.java ---
+[INFO] Executing tasks
+
+main:
+[INFO] Executed tasks
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.0.0:add-source (add-source) @ io.cucumber.java ---
+[INFO] Source directory: C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\java\target\generated-sources\i18n\java added.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ io.cucumber.java ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\java\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ io.cucumber.java ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 576 source files to C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\java\target\classes
+[INFO] /C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/java/src/main/java/cucumber/runtime/java/ObjectFactoryLoader.java: C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\java\src\main\java\cucumber\runtime\java\ObjectFactoryLoader.java uses unchecked or unsafe operations.
+[INFO] /C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/java/src/main/java/cucumber/runtime/java/ObjectFactoryLoader.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ io.cucumber.java ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 6 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ io.cucumber.java ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 19 source files to C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\java\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.0:test (default-test) @ io.cucumber.java ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running cucumber.runtime.java.Java8SnippetTest
+Given("I have {int} cukes in my {string} belly", (Integer int1, String string) -> {
+    // Write code here that turns the phrase above into concrete actions
+    throw new cucumber.api.PendingException();
+});
+
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.203 s - in cucumber.runtime.java.Java8SnippetTest
+[INFO] Running cucumber.runtime.java.JavaBackendTest
+[WARNING] Tests run: 3, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 0 s - in cucumber.runtime.java.JavaBackendTest
+[INFO] Running cucumber.runtime.java.JavaHookTest
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.914 s - in cucumber.runtime.java.JavaHookTest
+[INFO] Running cucumber.runtime.java.JavaObjectFactoryTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in cucumber.runtime.java.JavaObjectFactoryTest
+[INFO] Running cucumber.runtime.java.JavaSnippetTest
+[WARNING] Tests run: 17, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.034 s - in cucumber.runtime.java.JavaSnippetTest
+[INFO] Running cucumber.runtime.java.JavaStepDefinitionTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.063 s - in cucumber.runtime.java.JavaStepDefinitionTest
+[INFO] Running cucumber.runtime.java.JavaStepDefinitionTransposeTest
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in cucumber.runtime.java.JavaStepDefinitionTransposeTest
+[INFO] Running cucumber.runtime.java.MethodScannerTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.062 s - in cucumber.runtime.java.MethodScannerTest
+[INFO] Running cucumber.runtime.java.test.RunCukesTest
+[WARNING] Tests run: 1, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0 s - in cucumber.runtime.java.test.RunCukesTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[WARNING] Tests run: 44, Failures: 0, Errors: 0, Skipped: 5
+[INFO] 
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:report (post-unit-test) @ io.cucumber.java ---
+[INFO] Loading execution data file C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\java\target\coverage-reports\jacoco-ut.exec
+[INFO] Analyzed bundle 'Cucumber-JVM: Java' with 11 classes
+[INFO] 
+[INFO] --- maven-bundle-plugin:4.1.0:bundle (default-bundle) @ io.cucumber.java ---
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Unused Export-Package instructions: [java.cucumber.*] 
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.af,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.am,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.an,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.ar,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.ast,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.az,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.bg,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.bm,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.bs,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.ca,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.cs,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.cy_gb,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.da,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.de,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.el,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.en,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.en_au,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.en_lol,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.en_old,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.en_pirate,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.en_scouse,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.eo,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.es,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.et,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.fa,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.fi,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.fr,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.ga,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.gj,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.gl,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.he,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.hi,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.hr,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.ht,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.hu,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.id,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.is,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.it,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.ja,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.jv,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.ka,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.kn,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.ko,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.lt,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.lu,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.lv,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.mk_cyrl,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.mk_latn,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.mn,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.nl,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.no,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.pa,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.pl,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.pt,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.ro,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.ru,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.sk,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.sl,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.sr_cyrl,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.sr_latn,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.sv,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.ta,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.th,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.tl,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.tlh,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.tr,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.tt,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.uk,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.ur,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.uz,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.vi,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.zh_cn,  has 1,  private references [cucumber.runtime.java]
+[WARNING] Bundle io.cucumber:io.cucumber.java:bundle:4.2.1-SNAPSHOT : Export cucumber.api.java.zh_tw,  has 1,  private references [cucumber.runtime.java]
+[INFO] 
+[INFO] --- p2-maven-plugin:1.3.0:site (default-cli) @ io.cucumber.java ---
+[info] Resolving artifact=[io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.core.eclipse:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.core.eclipse-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] 	 [JAR] org.eclipse.osgi-3.13.100.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.java:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.java-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.junit.eclipse-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.junit-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] 	 [JAR] junit-4.12.jar
+[info] 	 [JAR] hamcrest-core-1.3.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.junit:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.junit-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] 	 [JAR] junit-4.12.jar
+[info] 	 [JAR] hamcrest-core-1.3.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.core.eclipse-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.java:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.java-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.junit.eclipse-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.junit:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.junit-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] cucumber-html-0.2.7.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] gherkin-5.1.0.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] tag-expressions-1.1.1.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] cucumber-expressions-6.2.0.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] datatable-1.1.7.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] datatable-dependencies-1.1.7.jar
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[info] Bundling Artifact io.cucumber:io.cucumber.core.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] org.eclipse.osgi-3.13.100.jar
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.junit-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[info] Bundling Artifact io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] junit-4.12.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] hamcrest-core-1.3.jar
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [junit-4.12.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [hamcrest-core-1.3.jar]
+[info] Resolved 0 features
+[INFO] Command line:
+	[C:\Program Files\Java\jdk1.8.0_152\jre\bin\java.exe, -jar, C:\Users\Heiko\.m2\repository\org\eclipse\tycho\tycho-bundles-external\1.0.0\eclipse\plugins\org.eclipse.equinox.launcher_1.3.201.v20161025-1711.jar, -configuration, C:\Users\Heiko\AppData\Local\Temp\tycho-p2-runtime5148960777038698292.tmp\configuration, -nosplash, -application, org.eclipse.equinox.p2.publisher.FeaturesAndBundlesPublisher, -artifactRepository, file:/C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/java/target/repository, -metadataRepository, file:/C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/java/target/repository, -publishArtifacts, -compress, -source, C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\java\target\source]
+Generating metadata for ..
+Generation completed with success [0 seconds].
+[INFO] Command line:
+	[C:\Program Files\Java\jdk1.8.0_152\jre\bin\java.exe, -jar, C:\Users\Heiko\.m2\repository\org\eclipse\tycho\tycho-bundles-external\1.0.0\eclipse\plugins\org.eclipse.equinox.launcher_1.3.201.v20161025-1711.jar, -configuration, C:\Users\Heiko\AppData\Local\Temp\tycho-p2-runtime3320856235558326885.tmp\configuration, -nosplash, -application, org.eclipse.equinox.p2.publisher.CategoryPublisher, -categoryDefinition, file:/C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\java\target\repository\category.xml, -metadataRepository, file:/C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\java\target\repository]
+Generating metadata for ..
+Generation completed with success [0 seconds].
+[INFO] 
+[INFO] --- maven-install-plugin:3.0.0-M1:install (default-install) @ io.cucumber.java ---
+[INFO] Installing C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\java\target\io.cucumber.java-4.2.1-SNAPSHOT.jar to C:\Users\Heiko\.m2\repository\io\cucumber\io.cucumber.java\4.2.1-SNAPSHOT\io.cucumber.java-4.2.1-SNAPSHOT.jar
+[INFO] Installing C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\java\pom_swtbot.xml to C:\Users\Heiko\.m2\repository\io\cucumber\io.cucumber.java\4.2.1-SNAPSHOT\io.cucumber.java-4.2.1-SNAPSHOT.pom
+[INFO] 
+[INFO] --- maven-bundle-plugin:4.1.0:install (default-install) @ io.cucumber.java ---
+[INFO] Installing io/cucumber/io.cucumber.java/4.2.1-SNAPSHOT/io.cucumber.java-4.2.1-SNAPSHOT.jar
+[INFO] Writing OBR metadata
+[INFO] 
+[INFO] ---------------< io.cucumber:io.cucumber.junit.eclipse >----------------
+[INFO] Building Cucumber-JVM: JUnit Eclipse fragment 4.2.1-SNAPSHOT       [6/6]
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ io.cucumber.junit.eclipse ---
+[INFO] Deleting C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\junit-eclipse\target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:3.0.0-M1:enforce (enforce) @ io.cucumber.junit.eclipse ---
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:prepare-agent (pre-unit-test) @ io.cucumber.junit.eclipse ---
+[INFO] surefireArgLine set to -javaagent:C:\\Users\\Heiko\\.m2\\repository\\org\\jacoco\\org.jacoco.agent\\0.8.2\\org.jacoco.agent-0.8.2-runtime.jar=destfile=C:\\projects\\src.2018.4\\cucumber-jvm-hko\\cucumber-jvm\\junit-eclipse\\target\\coverage-reports\\jacoco-ut.exec
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ io.cucumber.junit.eclipse ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\junit-eclipse\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:compile (default-compile) @ io.cucumber.junit.eclipse ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ io.cucumber.junit.eclipse ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\junit-eclipse\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.0:testCompile (default-testCompile) @ io.cucumber.junit.eclipse ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.0:test (default-test) @ io.cucumber.junit.eclipse ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jacoco-maven-plugin:0.8.2:report (post-unit-test) @ io.cucumber.junit.eclipse ---
+[INFO] Skipping JaCoCo execution due to missing execution data file.
+[INFO] 
+[INFO] --- maven-bundle-plugin:4.1.0:bundle (default-bundle) @ io.cucumber.junit.eclipse ---
+[WARNING] Bundle io.cucumber:io.cucumber.junit.eclipse:bundle:4.2.1-SNAPSHOT : Unused Export-Package instructions: [cucumber.api.*] 
+[WARNING] Bundle io.cucumber:io.cucumber.junit.eclipse:bundle:4.2.1-SNAPSHOT : The JAR is empty: The instructions for the JAR named io.cucumber.junit.eclipse did not cause any content to be included, this is likely wrong
+[INFO] 
+[INFO] --- p2-maven-plugin:1.3.0:site (default-cli) @ io.cucumber.junit.eclipse ---
+[info] Resolving artifact=[io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.core.eclipse:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.core.eclipse-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] 	 [JAR] org.eclipse.osgi-3.13.100.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.java:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.java-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.junit.eclipse-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.junit-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] 	 [JAR] junit-4.12.jar
+[info] 	 [JAR] hamcrest-core-1.3.jar
+[info] Resolving artifact=[io.cucumber:io.cucumber.junit:4.2.1-SNAPSHOT] transitive=[true] source=[false]
+[info] 	 [JAR] io.cucumber.junit-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] 	 [JAR] cucumber-html-0.2.7.jar
+[info] 	 [JAR] gherkin-5.1.0.jar
+[info] 	 [JAR] tag-expressions-1.1.1.jar
+[info] 	 [JAR] cucumber-expressions-6.2.0.jar
+[info] 	 [JAR] datatable-1.1.7.jar
+[info] 	 [JAR] datatable-dependencies-1.1.7.jar
+[info] 	 [JAR] junit-4.12.jar
+[info] 	 [JAR] hamcrest-core-1.3.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.core-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.core.eclipse-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.java:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.java-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.junit.eclipse-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.junit:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] io.cucumber.junit-4.2.1-SNAPSHOT.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] cucumber-html-0.2.7.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] gherkin-5.1.0.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] tag-expressions-1.1.1.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] cucumber-expressions-6.2.0.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] datatable-1.1.7.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.core:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] datatable-dependencies-1.1.7.jar
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[info] Bundling Artifact io.cucumber:io.cucumber.core.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [SKIP] org.eclipse.osgi-3.13.100.jar
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.junit-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[info] Bundling Artifact io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] junit-4.12.jar
+[info] Bundling Artifact io.cucumber:io.cucumber.junit.eclipse:4.2.1-SNAPSHOT
+[info] Executing Bundler:
+[info] 	 [EXEC] hamcrest-core-1.3.jar
+[debug] Not bundling transitive dependency since it has already been bundled [io.cucumber.core-4.2.1-SNAPSHOT.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-html-0.2.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [gherkin-5.1.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [tag-expressions-1.1.1.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [cucumber-expressions-6.2.0.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [datatable-dependencies-1.1.7.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [junit-4.12.jar]
+[debug] Not bundling transitive dependency since it has already been bundled [hamcrest-core-1.3.jar]
+[info] Resolved 0 features
+[INFO] Command line:
+	[C:\Program Files\Java\jdk1.8.0_152\jre\bin\java.exe, -jar, C:\Users\Heiko\.m2\repository\org\eclipse\tycho\tycho-bundles-external\1.0.0\eclipse\plugins\org.eclipse.equinox.launcher_1.3.201.v20161025-1711.jar, -configuration, C:\Users\Heiko\AppData\Local\Temp\tycho-p2-runtime585379885376602702.tmp\configuration, -nosplash, -application, org.eclipse.equinox.p2.publisher.FeaturesAndBundlesPublisher, -artifactRepository, file:/C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/junit-eclipse/target/repository, -metadataRepository, file:/C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/junit-eclipse/target/repository, -publishArtifacts, -compress, -source, C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\junit-eclipse\target\source]
+Generating metadata for ..
+Generation completed with success [0 seconds].
+[INFO] Command line:
+	[C:\Program Files\Java\jdk1.8.0_152\jre\bin\java.exe, -jar, C:\Users\Heiko\.m2\repository\org\eclipse\tycho\tycho-bundles-external\1.0.0\eclipse\plugins\org.eclipse.equinox.launcher_1.3.201.v20161025-1711.jar, -configuration, C:\Users\Heiko\AppData\Local\Temp\tycho-p2-runtime2440811286146845885.tmp\configuration, -nosplash, -application, org.eclipse.equinox.p2.publisher.CategoryPublisher, -categoryDefinition, file:/C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\junit-eclipse\target\repository\category.xml, -metadataRepository, file:/C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\junit-eclipse\target\repository]
+Generating metadata for ..
+Generation completed with success [0 seconds].
+[INFO] 
+[INFO] --- maven-install-plugin:3.0.0-M1:install (default-install) @ io.cucumber.junit.eclipse ---
+[INFO] Installing C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\junit-eclipse\target\io.cucumber.junit.eclipse-4.2.1-SNAPSHOT.jar to C:\Users\Heiko\.m2\repository\io\cucumber\io.cucumber.junit.eclipse\4.2.1-SNAPSHOT\io.cucumber.junit.eclipse-4.2.1-SNAPSHOT.jar
+[INFO] Installing C:\projects\src.2018.4\cucumber-jvm-hko\cucumber-jvm\junit-eclipse\pom_swtbot.xml to C:\Users\Heiko\.m2\repository\io\cucumber\io.cucumber.junit.eclipse\4.2.1-SNAPSHOT\io.cucumber.junit.eclipse-4.2.1-SNAPSHOT.pom
+[INFO] 
+[INFO] --- maven-bundle-plugin:4.1.0:install (default-install) @ io.cucumber.junit.eclipse ---
+[INFO] Installing io/cucumber/io.cucumber.junit.eclipse/4.2.1-SNAPSHOT/io.cucumber.junit.eclipse-4.2.1-SNAPSHOT.jar
+[INFO] Writing OBR metadata
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for Cucumber-JVM 4.2.1-SNAPSHOT:
+[INFO] 
+[INFO] Cucumber-JVM ....................................... SUCCESS [ 16.461 s]
+[INFO] Cucumber-JVM: Core ................................. SUCCESS [ 22.960 s]
+[INFO] Cucumber-JVM: Core-Eclipse fragment ................ SUCCESS [ 13.788 s]
+[INFO] Cucumber-JVM: JUnit ................................ SUCCESS [ 16.594 s]
+[INFO] Cucumber-JVM: Java ................................. SUCCESS [ 28.780 s]
+[INFO] Cucumber-JVM: JUnit Eclipse fragment ............... SUCCESS [ 10.598 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:51 min
+[INFO] Finished at: 2019-01-03T17:48:29+01:00
+[INFO] ------------------------------------------------------------------------

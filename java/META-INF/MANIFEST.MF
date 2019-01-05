@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: cucumber-java
-Bundle-SymbolicName: cucumber-java
-Bundle-Version: 1.0.0.qualifier
+Bundle-Name: Cucumber Java
+Bundle-SymbolicName: io.cucumber.java
+Bundle-Version: 4.2.1.qualifier
 Export-Package: cucumber.api.java,
  cucumber.api.java.af,
  cucumber.api.java.am,
@@ -85,3 +85,4 @@ Export-Package: cucumber.api.java,
 Require-Bundle: io.cucumber.core;bundle-version="4.2.1",
  io.cucumber.junit;bundle-version="4.2.1",
  io.cucumber.datatable;bundle-version="1.1.7"
+Bundle-Vendor: Avenqo GmbH, Germany

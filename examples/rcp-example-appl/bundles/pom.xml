@@ -1,0 +1,17 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.avenqo.cucumber</groupId>
+    <artifactId>com.avenqo.cucumber.example.appl.bundles</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>com.avenqo.cucumber</groupId>
+        <artifactId>com.avenqo.cucumber.example.appl.root</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <modules>
+        <module>com.avenqo.cucumber.example.appl</module>
+    </modules>
+</project>

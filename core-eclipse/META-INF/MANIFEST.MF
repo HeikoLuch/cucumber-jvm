@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Cucumber-core-eclipse
-Bundle-SymbolicName: cucumber-core-eclipse;singleton:=true
+Bundle-Name: Cucumber Core Eclipse Fragment
+Bundle-SymbolicName: io.cucumber.core.eclipse;singleton:=true
 Bundle-Version: 4.2.1.qualifier
 Bundle-Vendor: Avenqo GmbH, Germany
 Fragment-Host: io.cucumber.core;bundle-version="4.2.1.qualifier"

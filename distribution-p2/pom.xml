@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001 XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<!-- <parent> <groupId>io.cucumber</groupId> <artifactId>cucumber-jvm</artifactId> 
+		<version>4.2.1-SNAPSHOT</version> <relativePath>../pom_swtbot.xml</relativePath> 
+		</parent> -->
+	<groupId>io.cucumber</groupId>
+	<artifactId>distribution-p2-site</artifactId>
+	<packaging>pom</packaging>
+	<version>1.4.0-SNAPSHOT</version>
+	<properties>
+		<cucumber.version>4.2.1-SNAPSHOT</cucumber.version>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.reficio</groupId>
+				<artifactId>p2-maven-plugin</artifactId>
+				<version>1.3.0</version>
+				<executions>
+					<execution>
+						<id>default-cli</id>
+						<configuration>
+							<artifacts>
+								<!-- specify your depencies here -->
+
+								<!-- groupId:artifactId:version -->
+								<artifact>
+									<id>io.cucumber:io.cucumber.core:${cucumber.version}</id>
+								</artifact>
+								<artifact>
+									<id>io.cucumber:io.cucumber.core.eclipse:${cucumber.version}</id>
+								</artifact>
+
+								<artifact>
+									<id>io.cucumber:io.cucumber.junit.eclipse:${cucumber.version}</id>
+								</artifact>
+								<artifact>
+									<id>io.cucumber:io.cucumber.junit:${cucumber.version}</id>
+									<override>true</override>
+								</artifact>
+								<artifact>
+									<id>io.cucumber:io.cucumber.java:${cucumber.version}</id>
+								</artifact>
+							</artifacts>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>8.1.5.v20120716</version>
+				<configuration>
+					<scanIntervalSeconds>10</scanIntervalSeconds>
+					<webAppSourceDirectory>${basedir}/target/repository/</webAppSourceDirectory>
+					<webApp>
+						<contextPath>/site</contextPath>
+					</webApp>
+				</configuration>
+			</plugin>
+
+		</plugins>
+	</build>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>reficio</id>
+			<url>http://repo.reficio.org/maven/</url>
+		</pluginRepository>
+	</pluginRepositories>
+</project>

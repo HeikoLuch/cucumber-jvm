@@ -40,6 +40,7 @@
 
 
 	<properties>
+		<cucumber.version>4.2.1-SNAPSHOT</cucumber.version>
 		<gherkin.version>5.1.0</gherkin.version>
 		<groovy.version>2.5.4</groovy.version>
 		<picocontainer.version>2.15</picocontainer.version>
@@ -85,7 +86,7 @@
 		<typetools.version>0.5.0</typetools.version>
 		<cucumber-expressions.version>6.2.0</cucumber-expressions.version>
 		<datatable.version>1.1.7</datatable.version>
-		
+
 		<maven.bundle.version>4.1.0</maven.bundle.version>
 		<skip.assembly>true</skip.assembly>
 		<skip.tests>true</skip.tests>
@@ -143,7 +144,7 @@
 			</dependency>
 			<dependency>
 				<groupId>io.cucumber</groupId>
-				<artifactId>cucumber-junit</artifactId>
+				<artifactId>io.cucumber.junit</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
@@ -485,11 +486,13 @@
 	</dependencyManagement>
 
 	<modules>
-		<!--module>distribution/pom.xml</module -->
+
+		<module>core-eclipse/pom_swtbot.xml</module>
 		<module>core/pom_swtbot.xml</module>
 		<module>java/pom_swtbot.xml</module>
 		<module>junit/pom_swtbot.xml</module>
-		<!-- module>cucumber-osgi/pom.xml</module-->
+		<module>junit-eclipse/pom_swtbot.xml</module>
+		<module>distribution-p2/pom_swtbot.xml</module>
 	</modules>
 
 	<profiles>
@@ -704,6 +707,7 @@
 					</execution>
 				</executions>
 			</plugin>
+
 		</plugins>
 
 	</build>

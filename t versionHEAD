@@ -1,0 +1,494 @@
+[33mcommit f92a818df245ec8cfe1555bf276cc9f5885a872a[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: HeikoLuch <kopp66@gmx.net>
+Date:   Wed Jan 2 06:48:29 2019 +0100
+
+    git ignore adapted
+
+[33mcommit 3065c4b42abfb456dd36743f735bd1338d8e213f[m
+Author: HeikoLuch <kopp66@gmx.net>
+Date:   Wed Jan 2 06:47:05 2019 +0100
+
+    new fragment for junit
+
+[33mcommit ea6af8495ff806170e91c24b317a969b7e666dc7[m
+Author: HeikoLuch <kopp66@gmx.net>
+Date:   Wed Jan 2 06:22:38 2019 +0100
+
+    new fragment for core
+
+[33mcommit e60ceaaa07c22a3e197f4e6180532976b7b720b2[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: HeikoLuch <kopp66@gmx.net>
+Date:   Sun Dec 30 06:10:33 2018 +0100
+
+    Working screenshots
+
+[33mcommit 517ae96ca17a1489fc58428fd959fa3259247ad3[m
+Author: HeikoLuch <kopp66@gmx.net>
+Date:   Sat Dec 29 10:01:29 2018 +0100
+
+    Caching works
+
+[33mcommit 9b56d8533b52700843bd10ef6d0c37f11c89f064[m
+Author: HeikoLuch <kopp66@gmx.net>
+Date:   Sat Dec 29 06:44:13 2018 +0100
+
+    SWTBot Tests are running as Cucumber without screenshot
+
+[33mcommit 49efe50bf4bbcebd3a038068105bb7140cf696c2[m
+Author: HeikoLuch <kopp66@gmx.net>
+Date:   Thu Dec 27 06:26:53 2018 +0100
+
+    Cuke test is runnin succesfully
+
+[33mcommit 25b0f6c96ee5ba2aeccab26eee3220bc6275f705[m
+Author: HeikoLuch <kopp66@gmx.net>
+Date:   Mon Dec 24 09:41:15 2018 +0100
+
+    Zwischenstand
+
+[33mcommit 66af2206f3a1fcf57962e1cb9e17eb0742a3f53b[m
+Author: HeikoLuch <kopp66@gmx.net>
+Date:   Sat Dec 22 09:34:38 2018 +0100
+
+    Stand erreicht -> NPE beim Auffinden der Ressourcen
+
+[33mcommit 229b1f5a7a3d963f10b5c7554922d7170f2b0b41[m
+Author: HeikoLuch <kopp66@gmx.net>
+Date:   Wed Dec 19 07:37:58 2018 +0100
+
+    Backup removed
+
+[33mcommit 6109c57ff4c4d11d36f32875a7f1ab65082d9cd9[m
+Author: HeikoLuch <kopp66@gmx.net>
+Date:   Wed Dec 19 07:36:19 2018 +0100
+
+    Bundle support added via dynamic class loading (ImplementationLoader).
+
+[33mcommit 6f584f47cc4c0d97846d425e5dc69e09c7a86a93[m[33m ([m[1;31morigin/extract-dedicated-interfaces-for-options[m[33m)[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Sun Dec 9 14:39:12 2018 +0100
+
+    [Core] Add `io.cucumber.options` to revapi
+
+[33mcommit 170f8d250477d3481e4a6f5c13f250f625ed4044[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Sun Dec 2 19:29:57 2018 +0100
+
+    [Core] Extract interfaces for options
+
+[33mcommit cf8b3202f0beb2364b265214989022e1243fe883[m
+Author: M.P. Korstanje <rien.korstanje@gmail.com>
+Date:   Fri Nov 30 20:39:28 2018 +0100
+
+    [Core] Fix line endings
+
+[33mcommit 48f22af42ecdc246f4b3f8c5f8dcea58469fe177[m
+Author: M.P. Korstanje <rien.korstanje@gmail.com>
+Date:   Fri Nov 30 20:35:43 2018 +0100
+
+    [Core] Reformat code
+
+[33mcommit a8d748a1f75a72592ad51b609c3c081ff50f0580[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Sun Nov 25 15:07:49 2018 +0100
+
+    [Build] Update Groovy to 2.5.4
+
+[33mcommit 2b6eab127c34e443eb2965711538fc763ec22563[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Sun Nov 25 08:59:13 2018 +0100
+
+    Update changelog
+
+[33mcommit e62b1a98ff434d418fb56e62472c605c0331ac75[m
+Author: M.P. Korstanje <rien.korstanje@gmail.com>
+Date:   Sat Nov 17 11:42:48 2018 +0100
+
+    [Core] Update EventListener Javadoc
+    
+    Fixes: #1502
+
+[33mcommit 95b64d005e0626ec9fa5a32f7796bea7ff85e331[m
+Author: abhishek8908 <abhishek8908@gmail.com>
+Date:   Fri Nov 16 10:28:48 2018 +0100
+
+    [TestNG] Update testng documentation for parallel execution (#1501)
+
+[33mcommit 622bb1caef0befdc68e85f07d7544d32e3df79b1[m
+Author: M.P. Korstanje <rien.korstanje@gmail.com>
+Date:   Sat Nov 3 22:20:24 2018 +0100
+
+    [Build] Clean up pom
+
+[33mcommit a752f0922f4ecc5148279c71740a54770a78f278[m
+Author: Marit van Dijk <mlvandijk@gmail.com>
+Date:   Fri Nov 2 07:59:09 2018 +0100
+
+    [Build] Use cucumber-parent pom
+
+[33mcommit dce995661b26c45f09b7cdae233dedacace79ee0[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Wed Oct 31 08:53:00 2018 +0100
+
+    [Examples] Use implicit parameter types in date example
+
+[33mcommit bf2e025c62fe73836b0fd4b1c290eed61cd8fae4[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Mon Oct 29 20:02:50 2018 +0100
+
+    [maven-release-plugin] prepare for next development iteration
+
+[33mcommit 34ac723a192e9409ee2f41dbcdbdffa3964f6f5e[m[33m ([m[1;33mtag: v4.2.0[m[33m)[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Mon Oct 29 20:02:40 2018 +0100
+
+    [maven-release-plugin] prepare release v4.2.0
+
+[33mcommit a432178d0f7b60df5c1208a45ffed2f75267deae[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Mon Oct 29 19:55:16 2018 +0100
+
+    Update changelog
+
+[33mcommit a8c6eabe4511584a41d43cd9ae0a1288d7a67d6d[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Sun Oct 28 16:04:50 2018 +0100
+
+    [Build] Bump version
+
+[33mcommit 537f9d3eaafe5a351620d03a07e312569307a2bd[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Sat Oct 27 19:03:41 2018 +0200
+
+    [Core] Support anonymous parameter types
+    
+    Cucubumber expressions installs the  anonymous parameter type into the registry:
+    ```java
+    ParameterType(
+      name: ""
+      regexps: [\.*\]
+      transformer: s -> s
+      useForSnippets: false
+      preferForRegexMatch: true
+    )
+    ```
+    
+    This allows the step definition to hint the type to which the captured text
+    should be converted. When used in conjunction with an object mapper
+    this makes it easier to quickly define step definitions without the need
+    to define parameter types for each type. For example the following
+    will work without the need to configure additional parameter types.
+    
+    ```java
+    Given("^there is some date (.*)$", (Date a) -> { })
+    
+    Given("there is some date {}", (Date a) -> { })
+    
+    Given("there is some transaction {} {}", (BigDecimal a, Currency b) -> { })
+    
+    Given("there is some type {}", (TypeEnum a) -> { })
+    ```
+    
+    To make the dynamic transform possible type hints are passed to the cucumber
+    expression when matching a step. Using these hints the `s -> s` transform is
+    replaced with `s -> defaultTransform.transform(s, typeHint)`. A simple
+    implementation of the `defaultTransform` is provided that supports a selection
+    of primitives but should generally speaking be replaced with a proper object mapper.
+    
+    Fixes: https://github.com/cucumber/cucumber-jvm/issues/1478
+
+[33mcommit 8309f25223319fd892912372820caf783273d15b[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Sat Oct 27 13:36:30 2018 +0200
+
+    [maven-release-plugin] prepare for next development iteration
+
+[33mcommit 227c025b8b88f992a2a563dfadd647aeaf46f531[m[33m ([m[1;33mtag: v4.1.1[m[33m)[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Sat Oct 27 13:36:22 2018 +0200
+
+    [maven-release-plugin] prepare release v4.1.1
+
+[33mcommit 3233131f7dcd8ad5296112b26d8c6349c46bd700[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Sat Oct 27 11:24:55 2018 +0200
+
+    Prepare for release 4.1.1
+
+[33mcommit b3969e2b662c769ccc6c9e4e4c975b8de758166a[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Sat Oct 27 11:24:03 2018 +0200
+
+    [Core] Upgrade datatables to v1.1.7
+
+[33mcommit b0cb36b80698c2b66220b66912b2235ac64dad89[m
+Author: Cucumber Bot <cukebot@users.noreply.github.com>
+Date:   Wed Oct 24 23:06:27 2018 +0100
+
+    Create lock.yml
+
+[33mcommit 885286e17778cf7098f37be841bcb50db0e3d313[m
+Author: M.P. Korstanje <rien.korstanje@gmail.com>
+Date:   Fri Oct 19 21:42:15 2018 +0200
+
+    [maven-release-plugin] prepare for next development iteration
+
+[33mcommit 318196f76ed72517f1ee8d6a93f18345afe535a9[m[33m ([m[1;33mtag: v4.1.0[m[33m)[m
+Author: M.P. Korstanje <rien.korstanje@gmail.com>
+Date:   Fri Oct 19 21:42:05 2018 +0200
+
+    [maven-release-plugin] prepare release v4.1.0
+
+[33mcommit 4d8cc5bdba474b6f91fd7eb38624dfda9e8cf062[m
+Author: M.P. Korstanje <rien.korstanje@gmail.com>
+Date:   Fri Oct 19 21:40:42 2018 +0200
+
+    Prepare for release 4.1.0
+
+[33mcommit c1beb21b4490bb54e692f46c8afc4fe3f9b8eff8[m
+Author: James Bennett <james.bennett@bjss.com>
+Date:   Thu Oct 18 19:50:51 2018 +0100
+
+    [Guice] Replace CucumberModules.SCENARIO with threadsafe factory method
+    
+    Fixes an issue where the same SequentialScenarioScope is shared
+    across multiple threads when running in parallel. This causes
+    IllegalStateExceptions to be thrown.
+    
+    CucumberModules.SCENARIO and CucumberScopes.SCENARIO have been deprecated and replaced with a factory
+    methods - CucumberModules.createScenarioModule() and CucumberScopes.createScenario() respectively.
+    
+    Fixes: #1485
+
+[33mcommit 98ca518ebc127550c618c1ae23bd527da1d6c042[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Thu Oct 18 21:52:14 2018 +0200
+
+    [Build] Ignore Spring in revapi
+
+[33mcommit d2270cf66d2b672223c1b4f38d1888ede2341235[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Thu Oct 18 20:18:10 2018 +0200
+
+    Update changelog
+
+[33mcommit 9346da2fb40a15a43e6c2e0ed6e53815b8179378[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Thu Oct 18 19:45:16 2018 +0200
+
+    [Core] Use Locale.ROOT when transforming case of identifiers
+    
+    Several plugins use lowercased string representations of enum
+    values. Doing this without an explicit locale results in the
+    default locale being used. This may lead to surprising errors.
+    
+    Fixes: https://github.com/cucumber/cucumber-java-skeleton/issues/33
+
+[33mcommit e99e1028af4ca555fcc099a5df3a74a691384922[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Thu Oct 18 20:07:11 2018 +0200
+
+    [Spring] Update Spring dependencies
+
+[33mcommit 329cad4d1afdda7661cc942e303250472a99756c[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Thu Oct 18 19:44:25 2018 +0200
+
+    [Build] Automatically stage, release and drop bundles
+
+[33mcommit fe092110aa275c8b107da68f97aa118e1d436c7b[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Tue Oct 16 19:33:39 2018 +0200
+
+    [maven-release-plugin] prepare for next development iteration
+
+[33mcommit 24cf59cb5a8de38af57ca9091b9b44e3926fb154[m[33m ([m[1;33mtag: v4.0.2[m[33m)[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Tue Oct 16 19:33:30 2018 +0200
+
+    [maven-release-plugin] prepare release v4.0.2
+
+[33mcommit aa1c2ed32ad891d330459aac1bcd1b0bc29cd6c9[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Tue Oct 16 19:31:33 2018 +0200
+
+    Prepare for release 4.0.2
+
+[33mcommit 25a1ef71e8966d2cbf0b5edc0a4cdb2725c2f3e2[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Tue Oct 16 19:29:33 2018 +0200
+
+    Update changelog
+
+[33mcommit 03f6cfac58ab338025d12fd64cb228bb86002ef9[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Mon Oct 15 23:34:02 2018 +0200
+
+    [Core] Pretty formatter is not a concurrent event listener
+    
+    Fixes #1480
+
+[33mcommit 78b4cd1116ec0b46eb0aa84dbb125e8928dc5eab[m
+Author: lukasz.suski <lukasz.suski@finanteq.com>
+Date:   Fri Oct 12 14:14:56 2018 +0200
+
+    [Core] Upgrade cucumber-expressions to 6.1.1
+
+[33mcommit a4b0a9f700c725e0386c277afe8c652de0369a84[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Sat Oct 6 19:06:03 2018 +0200
+
+    [Core] Apply identity transform to argument when target type is Object
+    
+    ```java
+    @Given("a doc string:")
+    public void given_a_doc_string(Object docString){
+    
+    }
+    
+    @Given("a data table
+    public void given_a_data_table(Object table){
+    
+    }
+    ```
+    
+    Results in an error telling us that Cucumber
+    doesn't know how to transform an instance of
+    `String` or `Datatable` to `Object`. This is
+    a bit silly.
+
+[33mcommit 7bd9202c63b6e57213137cfe546b6255aef577ec[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Fri Oct 5 22:18:02 2018 +0200
+
+    Fix attribution
+
+[33mcommit 51969b5623afb28228234f2dd9053b9ca09018f6[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Fri Oct 5 22:09:19 2018 +0200
+
+    [maven-release-plugin] prepare for next development iteration
+
+[33mcommit b79425df8fb3e76b3af301c5817da9f550add7aa[m[33m ([m[1;33mtag: v4.0.1[m[33m)[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Fri Oct 5 22:09:11 2018 +0200
+
+    [maven-release-plugin] prepare release v4.0.1
+
+[33mcommit 3c2d48085db292002bf0ee2c8acdf3499a395024[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Fri Oct 5 22:07:53 2018 +0200
+
+    Prepare for release 4.0.1
+
+[33mcommit 61b1aa29628a19395292475e05668f0feb218b56[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Thu Oct 4 23:03:12 2018 +0200
+
+    [Java8] Apply identity transform when target type is unknown
+
+[33mcommit 826c5ee528099b7bc021a33114d23f3deb56f2c8[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Thu Oct 4 21:10:17 2018 +0200
+
+    [Java8] Remove debug statements
+
+[33mcommit 8ebda218a6f6008eec7322e94024d8f9e003ccb4[m
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Sun Sep 30 22:44:53 2018 +0200
+
+    Update changelog
+
+[33mcommit 5fda1116aef754a06139e8f2659da2b93836ae8e[m
+Merge: bb5d84515 f76203720
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Sun Sep 30 22:26:44 2018 +0200
+
+    Merge branch 'rjwittams-master'
+
+[33mcommit f762037201149ad955afb8ecda26bff1ea601e4c[m
+Merge: bb5d84515 c27106ecf
+Author: mpkorstanje <logarithmicwhale@gmail.com>
+Date:   Sun Sep 30 22:21:06 2018 +0200
+
+    Merge branch 'master' of git://github.com/rjwittams/cucumber-jvm into rjwittams-master
+
+[33mcommit bb5d84515b5e5e0d64777a4628a3ef3d42775c67[m
+Author: M.P. Korstanje <mpkorstanje@users.noreply.github.com>
+Date:   Sun Sep 30 20:19:34 2018 +0200
+
+    [Core] Reduce plugin memory usage (#1469)
+    
+    The ordered event publisher is only needed when
+    dealing with legacy plugins. As the ordered event
+    publisher stores all events and replays them later
+    memory usage can be reduced by creating it only
+    when needed.
+
+[33mcommit a60f87deebf4c879dc2c102072f1effdc985f5b9[m
+Author: M.P. Korstanje <rien.korstanje@gmail.com>
+Date:   Sun Sep 23 14:20:43 2018 +0200
+
+    [Build] Automatically release build artifacts
+
+[33mcommit c4ef0114b2c010208b2e042592780d8a02077c35[m
+Author: M.P. Korstanje <rien.korstanje@gmail.com>
+Date:   Sun Sep 23 13:40:08 2018 +0200
+
+    [maven-release-plugin] prepare for next development iteration
+
+[33mcommit f1aefa42546d4d3a615778b40c7dbe83291aca04[m[33m ([m[1;33mtag: v4.0.0[m[33m)[m
+Author: M.P. Korstanje <rien.korstanje@gmail.com>
+Date:   Sun Sep 23 13:39:57 2018 +0200
+
+    [maven-release-plugin] prepare release v4.0.0
+
+[33mcommit 2753e7f04412bfcc0907b8943612e9d195d7668b[m
+Author: M.P. Korstanje <rien.korstanje@gmail.com>
+Date:   Sun Sep 23 13:37:59 2018 +0200
+
+    Prepare for release 4.0.0
+
+[33mcommit 77c855df0bff62fb8c39288ffdab4fd9e5ddff0b[m
+Author: M.P. Korstanje <rien.korstanje@gmail.com>
+Date:   Sun Sep 23 13:33:33 2018 +0200
+
+    [Examples] Remove gradle example
+    
+    The gradle example doesn't run as part of the build making it
+    lag behind. It is not worth the effort of including it in the
+    build, the example is similair to `cucumber-java-skeleton`.
+
+[33mcommit d80baab12a9a93b3225a880f637d1229c72ab7a4[m
+Author: M.P. Korstanje <rien.korstanje@gmail.com>
+Date:   Sun Sep 23 13:08:45 2018 +0200
+
+    [Core] Upgrade cucumber expressions to 6.1.0
+    
+    Closes #1393
+
+[33mcommit f8183b22a11411207c0e5a105ef68010f6d347f7[m
+Author: M.P. Korstanje <rien.korstanje@gmail.com>
+Date:   Sun Sep 23 11:38:29 2018 +0200
+
+    [Build] Improve method by which examples are included from deployment
+    
+    When using local staging the deployment is deferred to the last module.
+    Because half the project consists of examples that should not be
+    deployed and thus skip the execution of the nexus staging plugin
+    this causes the whole whole project to skip deployment.
+    
+    By having `continuous-deployment` as last module in the build we ensured
+    that the nexus plugin is triggered uploads all artifacts at the end of
+    the build.
+    
+    This however results in the inclusion of the `continuous-deployment`
+    artifact. By putting examples in a profile that is active by default
+    we do ensure it will always be build and but can exclude it from the
+    actual release.
+
+[33mcommit 49d8f68746bd45fc80fdbd338f4d90bcde617c1c[m
+Author: John Patrick <nhoj.patrick@gmail.com>
+Date:   Thu Sep 13 21:27:45 2018 +0100
+
+     Explain why recognisesWordWithNumbers test is ignored  (#1456)

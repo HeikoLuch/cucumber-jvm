@@ -10,10 +10,10 @@
 		<relativePath>../pom_swtbot.xml</relativePath>
 	</parent>
 
-	<artifactId>cucumber-core</artifactId>
+	<artifactId>io.cucumber.core</artifactId>
 	<packaging>bundle</packaging>
 	<name>Cucumber-JVM: Core</name>
-
+	<version>4.2.1-SNAPSHOT</version>
 	<dependencies>
 		<dependency>
 			<groupId>io.cucumber</groupId>
@@ -239,8 +239,8 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<Export-Package>cucumber.runtime.*,cucumber.runner.*,cucumber.api.*,io.cucumber.*,cucumber.api.formatter.*</Export-Package>
-						<Import-Package>cucumber.runtime.*,cucumber.runner.*,cucumber.api.*,io.cucumber.*,gherkin.*,org.*,io.cucumber.cucumberexpressions.*</Import-Package>
+						<Export-Package>cucumber.runtime.*,cucumber.runner.*,cucumber.api.*,io.cucumber.*,cucumber.util</Export-Package>
+						<Import-Package>cucumber.runtime.*,cucumber.runner.*,cucumber.api.*,io.cucumber.*,gherkin.*,org.*</Import-Package>
 					</instructions>
 				</configuration>
 			</plugin>
