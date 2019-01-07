@@ -25,7 +25,7 @@ public class BundleInfo {
 
 				// Versuche, den Filepath zu ermitteln
 				try {
-					String filepath = Helpers.filePath(url);
+					String filepath = Old_Helpers.filePath(url);
 					System.out.println("     filepath = '" + filepath + "'");
 
 				} catch (Throwable t) {

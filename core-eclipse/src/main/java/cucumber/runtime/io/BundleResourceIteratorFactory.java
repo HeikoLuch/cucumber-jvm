@@ -1,10 +1,7 @@
 package cucumber.runtime.io;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.Iterator;
-
-import cucumber.runtime.CucumberException;
 
 public class BundleResourceIteratorFactory implements ResourceIteratorFactory {
 

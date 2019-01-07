@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/io.cucumber.eclipse.feature_4.2.1.qualifier.jar" id="io.cucumber.eclipse.feature" version="4.2.1.qualifier">
+      <category name="io.cucumber.eclipse"/>
+   </feature>
+   <category-def name="io.cucumber.eclipse" label="Cucumber for Eclipse"/>
+</site>

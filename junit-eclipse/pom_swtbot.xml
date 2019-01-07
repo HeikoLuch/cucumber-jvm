@@ -27,6 +27,7 @@
 	</dependencies>
 
 	<build>
+		<sourceDirectory>${basedir}/src/main/java</sourceDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.felix</groupId>
@@ -35,6 +36,13 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
+						<Fragment-Host>io.cucumber.junit;bundle-version="4.2.1"</Fragment-Host>
+						<Bundle-Vendor>Avenqo GmbH, Germany</Bundle-Vendor>
+						<Bundle-ClassPath>patch.jar,.</Bundle-ClassPath>
+						<Bundle-SymbolicName>io.cucumber.junit.eclipse</Bundle-SymbolicName>
+						<Automatic-Module-Name>cucumber-junit-eclipse</Automatic-Module-Name>
+						<Bundle-RequiredExecutionEnvironment>JavaSE-1.8</Bundle-RequiredExecutionEnvironment>
+						<Eclipse-PatchFragment>true</Eclipse-PatchFragment>
 						<Export-Package>cucumber.api.*</Export-Package>
 						<!-- Import-Package>cucumber.api.formatter,gherkin,junit.framework,org.junit.*,org.hamcrest,cucumber.*,io.cucumber.*</Import-Package -->
 					</instructions>

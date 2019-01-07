@@ -1,10 +1,6 @@
 package com.avenqo.cucumber.example.appl.swtbot.steps;
 
-abstract class AbstractStepDefinition {
-	
-}
 
-/*
 import org.eclipse.e4.core.contexts.EclipseContextFactory;
 import org.eclipse.e4.core.contexts.IEclipseContext;
 import org.eclipse.swtbot.e4.finder.widgets.SWTWorkbenchBot;
@@ -52,4 +48,4 @@ abstract class AbstractStepDefinition {
 			throw new CucumberException ("Boolean expression (" + value + ") is invalid.");
 		return isTrue;
 	}
-}*/
+}

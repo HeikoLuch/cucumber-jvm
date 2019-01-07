@@ -13,7 +13,7 @@
 	<artifactId>io.cucumber.core.eclipse</artifactId>
 	<packaging>bundle</packaging>
 	<name>Cucumber-JVM: Core-Eclipse fragment</name>
-	
+
 
 	<properties>
 		<skip.assembly>false</skip.assembly>
@@ -25,15 +25,18 @@
 			<artifactId>io.cucumber.core</artifactId>
 			<version>${cucumber.version}</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.eclipse.platform</groupId>
 			<artifactId>org.eclipse.osgi</artifactId>
 			<version>3.13.100</version>
 		</dependency>
-	
+		<!-- <dependency> <groupId>org.eclipse.core</groupId> <artifactId>org.eclipse.core.runtime</artifactId> 
+			<version>3.7.0</version> </dependency> -->
 	</dependencies>
 
 	<build>
+		<sourceDirectory>${basedir}/src/main/java</sourceDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -64,8 +67,15 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-						<Export-Package>cucumber.runtime.*,cucumber.runner.*,cucumber.api.*,io.cucumber.*,cucumber.api.formatter.*</Export-Package>
-						<Import-Package>cucumber.runtime.*,cucumber.runner.*,cucumber.api.*,io.cucumber.*,gherkin.*,org.*,io.cucumber.cucumberexpressions.*</Import-Package>
+						<Fragment-Host>io.cucumber.core;bundle-version="4.2.1"</Fragment-Host>
+						<Bundle-Vendor>Avenqo GmbH, Germany</Bundle-Vendor>
+						<Bundle-ClassPath>patch.jar,.</Bundle-ClassPath>
+						<Bundle-SymbolicName>io.cucumber.core.eclipse;singleton:=true</Bundle-SymbolicName>
+						<Automatic-Module-Name>cucumber-core-eclipse</Automatic-Module-Name>
+						<Bundle-RequiredExecutionEnvironment>JavaSE-1.8</Bundle-RequiredExecutionEnvironment>
+						<Eclipse-PatchFragment>true</Eclipse-PatchFragment>
+						<!-- <Export-Package>cucumber.runtime.*,cucumber.runner.*,cucumber.api.*,io.cucumber.*,cucumber.api.formatter.*</Export-Package> 
+							<Import-Package>cucumber.runtime.*,cucumber.runner.*,cucumber.api.*,io.cucumber.*,gherkin.*,org.*,io.cucumber.cucumberexpressions.*</Import-Package> -->
 					</instructions>
 				</configuration>
 			</plugin>

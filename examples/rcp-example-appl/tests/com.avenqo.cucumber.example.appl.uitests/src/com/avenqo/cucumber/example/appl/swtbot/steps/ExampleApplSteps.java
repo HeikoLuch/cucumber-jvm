@@ -5,20 +5,22 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
+import org.eclipse.e4.ui.model.application.ui.basic.MPart;
+import org.eclipse.swtbot.e4.finder.widgets.SWTBotView;
 //import org.eclipse.swtbot.e4.finder.widgets.SWTBotView;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotMenu;
 import org.eclipse.swtbot.swt.finder.widgets.SWTBotShell;
 import org.junit.Assert;
 
-//import cucumber.api.java.en.Given;
-//import cucumber.api.java.en.Then;
-//import cucumber.api.java.en.When;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class ExampleApplSteps extends AbstractStepDefinition 
 {
 	private static final String PART_TITLE = "Sample Part";
 
-	/*
+	
 	@Given("^the menu Help is enabled$")
 	public void menuHelpIsEnabled() throws Throwable {
 		// Call about dialog
@@ -75,5 +77,5 @@ public class ExampleApplSteps extends AbstractStepDefinition
 		dialogAbout.bot().button().click();
 	}
 	
-	*/
+
 }

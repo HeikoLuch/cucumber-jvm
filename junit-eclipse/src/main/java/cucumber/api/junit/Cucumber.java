@@ -78,6 +78,7 @@ public class Cucumber extends ParentRunner<FeatureRunner> {
      */
     public Cucumber(Class clazz) throws InitializationError {
         super(clazz);
+System.out.println("============================ Fragement loaded =======================================");        
         ClassLoader classLoader = clazz.getClassLoader();
         Assertions.assertNoCucumberAnnotatedMethods(clazz);
 

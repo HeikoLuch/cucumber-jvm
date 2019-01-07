@@ -12,10 +12,19 @@
 	</parent>
 
 	<modules>
+	<!-- 
+		<module>../../core/pom_tycho.xml</module>
+		<module>../../junit/pom_tycho.xml</module>
+		<module>../../java/pom_tycho.xml</module>
+	
+		<module>../../core-eclipse</module>
+		<module>../../junit-eclipse</module>
+		-->
 		<module>bundles</module>
 		<module>features</module>
 		<module>releng</module>
 		<module>tests</module>
+		
 	</modules>
 </project>
 

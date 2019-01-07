@@ -29,32 +29,28 @@
 						<id>default-cli</id>
 						<configuration>
 							<artifacts>
-								<!-- specify your depencies here -->
-
-								<!-- groupId:artifactId:version -->
 								<artifact>
 									<id>io.cucumber:io.cucumber.core:${cucumber.version}</id>
+									<source>true</source>
 								</artifact>
+								
+								<artifact>
+									<id>io.cucumber:io.cucumber.junit:${cucumber.version}</id>
+									<source>true</source>
+								</artifact>								
+								<artifact>
+									<id>io.cucumber:io.cucumber.java:${cucumber.version}</id>
+									<source>true</source>
+								</artifact>
+								
+								<!-- Fragments build by Tycho 
 								<artifact>
 									<id>io.cucumber:io.cucumber.core.eclipse:${cucumber.version}</id>
 								</artifact>
-
 								<artifact>
 									<id>io.cucumber:io.cucumber.junit.eclipse:${cucumber.version}</id>
 								</artifact>
-								<artifact>
-									<id>io.cucumber:io.cucumber.junit:${cucumber.version}</id>
-									<!-- 
-									<override>true</override>
-									<instructions>
-										<Import-Package>cucumber.runtime,cucumber.api.formatter,gherkin,junit.framework,org.junit.*,org.hamcrest,*;resolution:=optional</Import-Package>
-        								<Export-Package>*</Export-Package>
-									</instructions>
-									 -->
-								</artifact>
-								<artifact>
-									<id>io.cucumber:io.cucumber.java:${cucumber.version}</id>
-								</artifact>
+								-->
 							</artifacts>
 						</configuration>
 					</execution>

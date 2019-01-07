@@ -91,7 +91,7 @@
 	</properties>
 
 	<build>
-
+    	<sourceDirectory>${basedir}/src/main/java</sourceDirectory>
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
@@ -239,8 +239,14 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
+					<Bundle-ClassPath>patch.jar,.</Bundle-ClassPath>
+					<Eclipse-ExtensibleAPI>true</Eclipse-ExtensibleAPI>
+					<Bundle-Vendor>Avenqo GmbH, Germany</Bundle-Vendor>
+					<Bundle-ActivationPolicy>lazy</Bundle-ActivationPolicy>
+					<!-- 
 						<Export-Package>cucumber.runtime.*,cucumber.runner.*,cucumber.api.*,io.cucumber.*,cucumber.util</Export-Package>
 						<Import-Package>cucumber.runtime.*,cucumber.runner.*,cucumber.api.*,io.cucumber.*,gherkin.*,org.*</Import-Package>
+					-->
 					</instructions>
 				</configuration>
 			</plugin>
