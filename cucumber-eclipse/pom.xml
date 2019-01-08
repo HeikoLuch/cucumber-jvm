@@ -12,8 +12,11 @@
 	</parent>
 
 	<modules>
+	<!--
 		<module>../core-eclipse</module>
 		<module>../junit-eclipse</module>
+		-->
+		<module>bundles</module>
 		<module>features</module>
 		<module>releng</module>
 	</modules>

@@ -10,15 +10,17 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
- 
-<repositories>
-    <repository>
-        <id>locale_p2_cucumber</id> 
-        
-        <url>file:/C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/distribution-p2/target/repository</url>
-        <layout>p2</layout>
-    </repository>
-</repositories>
+	<repositories>
+		<repository>
+			<id>locale_p2_cucumber</id>
+			<!-- Windows -->
+			<url>file:///${basedir}/../../../distribution-p2/target/repository</url>
+			<!-- Linux
+			<url>file://${basedir}/../../../distribution-p2/target/repository</url>
+			-->
+			<layout>p2</layout>
+		</repository>
+	</repositories>
 
 	<build>
 		<plugins>
@@ -66,62 +68,43 @@
 								<versionRange>0.0.0</versionRange>
 							</requirement>
 							<!-- This is only for usage of OSGI Console -->
- 
-        <requirement>
-          <type>eclipse-plugin</type>
-          <id>org.eclipse.equinox.console</id>
-          <versionRange>0.0.0</versionRange>
-        </requirement>
-        <requirement>
-          <type>eclipse-plugin</type>
-          <id>org.apache.felix.gogo.command</id>
-          <versionRange>0.0.0</versionRange>
-        </requirement>
-        <requirement>
-          <type>eclipse-plugin</type>
-          <id>org.apache.felix.gogo.runtime</id>
-          <versionRange>0.0.0</versionRange>
-        </requirement>
-        <requirement>
-          <type>eclipse-plugin</type>
-          <id>org.apache.felix.gogo.shell</id>
-          <versionRange>0.0.0</versionRange>
-        </requirement>
-        <!-- END: This is only for usage of OSGI Console -->
-        
+
+							<requirement>
+								<type>eclipse-plugin</type>
+								<id>org.eclipse.equinox.console</id>
+								<versionRange>0.0.0</versionRange>
+							</requirement>
+							<requirement>
+								<type>eclipse-plugin</type>
+								<id>org.apache.felix.gogo.command</id>
+								<versionRange>0.0.0</versionRange>
+							</requirement>
+							<requirement>
+								<type>eclipse-plugin</type>
+								<id>org.apache.felix.gogo.runtime</id>
+								<versionRange>0.0.0</versionRange>
+							</requirement>
+							<requirement>
+								<type>eclipse-plugin</type>
+								<id>org.apache.felix.gogo.shell</id>
+								<versionRange>0.0.0</versionRange>
+							</requirement>
+							<!-- END: This is only for usage of OSGI Console -->
+
 						</extraRequirements>
 					</dependency-resolution>
 
 					<environments>
-					<environment>
-							<os>win32</os>
-							<ws>win32</ws>
-							<arch>x86_64</arch>
-						</environment>
-<!--						
-<environment>
-							<os>linux</os>
-							<ws>gtk</ws>
-							<arch>x86_64</arch>
-						</environment>
-						<environment>
-							<os>linux</os>
-							<ws>gtk</ws>
-							<arch>x86</arch>
-						</environment>
-						
 						<environment>
 							<os>win32</os>
 							<ws>win32</ws>
-							<arch>x86</arch>
-						</environment>
-						
-						<environment>
-							<os>macosx</os>
-							<ws>cocoa</ws>
 							<arch>x86_64</arch>
 						</environment>
--->						
+						<!-- <environment> <os>linux</os> <ws>gtk</ws> <arch>x86_64</arch> 
+							</environment> <environment> <os>linux</os> <ws>gtk</ws> <arch>x86</arch> 
+							</environment> <environment> <os>win32</os> <ws>win32</ws> <arch>x86</arch> 
+							</environment> <environment> <os>macosx</os> <ws>cocoa</ws> <arch>x86_64</arch> 
+							</environment> -->
 					</environments>
 				</configuration>
 			</plugin>

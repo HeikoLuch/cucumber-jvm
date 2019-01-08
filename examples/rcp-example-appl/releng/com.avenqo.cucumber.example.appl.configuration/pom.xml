@@ -14,9 +14,12 @@
  
 <repositories>
     <repository>
-        <id>locale_p2_cucumber</id> 
-        
-        <url>file:/C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/distribution-p2/target/repository</url>
+        <id>locale_p2_cucumber</id>
+			<!-- Windows -->
+			<url>file:///${basedir}/../../../../distribution-p2/target/repository</url>
+			<!-- Linux
+			<url>file://${basedir}/../../../distribution-p2/target/repository</url>
+			-->
         <layout>p2</layout>
     </repository>
  
