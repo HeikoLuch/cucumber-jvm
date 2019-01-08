@@ -27,8 +27,8 @@ public class BundleResourceLoaderClassFinder implements ClassFinder {
 
             try {
                 Class<?> clazz = loadClass(className);
-                boolean b = parentType.equals(clazz);
-                boolean c = parentType.isAssignableFrom(clazz);
+//                boolean b = parentType.equals(clazz);
+//                boolean c = parentType.isAssignableFrom(clazz);
                 if (clazz != null && !parentType.equals(clazz) && parentType.isAssignableFrom(clazz)) {
                     result.add(clazz.asSubclass(parentType));
                 }

@@ -1,28 +1,23 @@
 package cucumber.runtime.io;
 
-import cucumber.runtime.CucumberException;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
+import org.eclipse.core.runtime.FileLocator;
+import cucumber.runtime.CucumberException;
 
-
-
-
-public class Old_Helpers {
+/**
+ * Indirect substitute of the original Helpers class.
+ * 
+ * A direct substitution is not possible: Helpers is used in a static way.
+ * Static imports are not loaded from fragment when loading class. (Why?)
+ * 
+ * @author Heiko
+ */
+public class BundleHelpers {
 	
-//	// -----------------------------------------------
-//	private static final BundleFileLocator IMPL;
-//	static {
-//		//try to load class FactoryDateTimeImpl from fragment
-//		IMPL = (BundleFileLocator) ImplementationLoader.newInstance (BundleFileLocator.class);
-//	}
-//	// --------------------------------------------------
-	
-	private Old_Helpers() {
+	private BundleHelpers() {
 	}
 
 	static boolean hasSuffix(String suffix, String name) {
@@ -64,34 +59,23 @@ public class Old_Helpers {
 		}
 	}
 
-	private static String getAbsolutePathAsString(URL url) {
+
+	
+	private static String getAbsolutePathAsString(URL fileUrl) {
 		String sRet = null;
 		try {
-			
-			
-			throw new CucumberException("Not implemented for URL: " + url);
+			URL blu = FileLocator.resolve(fileUrl);
+			URI uri = blu.toURI();
+			sRet = uri.getSchemeSpecificPart();
+			if (sRet.startsWith("file:/")) {
+				sRet = sRet.substring(5);
+			}
+			else
+				throw new CucumberException("Don't know how to handle SchemeSpecificPart in URL: " + fileUrl);
 
 		} catch (Exception e) {
 			throw new CucumberException(e);
 		}
-
+		return sRet;
 	}
-	
-//	private static String getAbsolutePathAsString(URL fileUrl) {
-//		String sRet = null;
-//		try {
-//			URL blu = FileLocator.resolve(fileUrl);
-//			URI uri = blu.toURI();
-//			sRet = uri.getSchemeSpecificPart();
-//			if (sRet.startsWith("file:/")) {
-//				sRet = sRet.substring(5);
-//			}
-//			else
-//				throw new CucumberException("Don't know how to handle SchemeSpecificPart in URL: " + fileUrl);
-//
-//		} catch (Exception e) {
-//			throw new CucumberException(e);
-//		}
-//		return sRet;
-//	}
 }

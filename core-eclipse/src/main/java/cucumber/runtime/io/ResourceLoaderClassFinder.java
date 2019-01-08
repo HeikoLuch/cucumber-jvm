@@ -11,7 +11,7 @@ public class ResourceLoaderClassFinder implements ClassFinder {
     private final ClassLoader classLoader;
 
     public ResourceLoaderClassFinder(ResourceLoader resourceLoader, ClassLoader classLoader) {
-        this.resourceLoader = resourceLoader; //i.e. MultiLoader
+    	this.resourceLoader = resourceLoader; //i.e. MultiLoader
         this.classLoader = classLoader; // i.e. EquinoxClassLoader
     }
 

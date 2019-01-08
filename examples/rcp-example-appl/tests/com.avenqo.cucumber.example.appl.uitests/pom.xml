@@ -33,6 +33,11 @@
 					</systemProperties>
 					<dependencies>
 						<dependency>
+							<type>eclipse-plugin</type>
+							<artifactId>io.cucumber.datatable-dependencies</artifactId>
+							<version>1.1.7</version>
+						</dependency>
+						<dependency>
 							<type>eclipse-feature</type>
 							<artifactId>io.cucumber.eclipse.feature</artifactId>
 							<version>0.0.0</version>

@@ -25,6 +25,8 @@ public class ClasspathResourceIterable implements Iterable<Resource> {
 	private final String suffix;
 
 	public ClasspathResourceIterable(ClassLoader classLoader, String path, String suffix) {
+		System.out.println("********************* 3. Fragment loaded *****************************************");
+        
 		this.classLoader = classLoader; //ignore in OSGI
 		this.path = path;
 		this.suffix = suffix;
