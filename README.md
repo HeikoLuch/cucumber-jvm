@@ -1,71 +1,25 @@
-# Cucumber JVM
+# Cucumber for Eclipse
+Cucumber-JVM for Eclipse is a fork of the well known [Cucumber-JVM](https://github.com/cucumber/cucumber-jvm) project providing the capability to run SWTBot tests controlled by Cucumber Features files.
 
-[![OpenCollective](https://opencollective.com/cucumber/backers/badge.svg)](https://opencollective.com/cucumber) 
-[![OpenCollective](https://opencollective.com/cucumber/sponsors/badge.svg)](https://opencollective.com/cucumber)
+## Why is a separated project needed?
+### Classloading in OSGI
+Out-of-the-box, it is not possible to rund SWTBot Tests using pure Cucumber-JVM. The current implementation is intensively using the classloader mechanism of Java.
+In contrast to Cucumber-JVM, SWTBot tests as well as Eclipse RCP Applications are based on OSGI modules. Each OSGI-Module has it's own classloader. Therefore, Cucumber-JVM ist not able to resolve glue code and feature resources.
 
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.cucumber/cucumber-jvm/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.cucumber/cucumber-jvm)
-[![Build Status](https://travis-ci.org/cucumber/cucumber-jvm.svg?branch=master)](https://travis-ci.org/cucumber/cucumber-jvm)
-[![Coverage Status](https://coveralls.io/repos/github/cucumber/cucumber-jvm/badge.svg?branch=master)](https://coveralls.io/github/cucumber/cucumber-jvm?branch=master)
+### Bundling Cucumber as OSGI bundles was stopped
+With Cucumber-JVM 3.0.0 the packaging of OSGI-bundles [has been stopped](https://github.com/cucumber/cucumber/issues/412).
 
-Cucumber-JVM is a pure Java implementation of Cucumber. 
-You can [run](https://docs.cucumber.io/cucumber/api/#running-cucumber) it with the tool of your choice.
-Cucumber-JVM also integrates with all the popular [Dependency Injection containers](https://docs.cucumber.io/installation/java/#dependency-injection).
+## Building the project
+### The short story
+checkout
+mvn clean install org.reficio:p2-maven-plugin:1.3.0:site -f pom_swtbot.xml
+cd cucumber-eclipse
+mvn clean verify
 
-## Documentation
+You can find the created p2-repository in: 
+./cucumber-eclipse/releng/io.cucumber.eclipse.update/target/repository
 
-[Start Here](https://cucumber.io/docs).
-
-If you'd like to contribute to the documentation, go [here](https://github.com/cucumber/docs.cucumber.io).
-
-## Hello World
-
-Check out the simple [cucumber-java-skeleton](https://github.com/cucumber/cucumber-java-skeleton) starter project.
-
-## Downloading / Installation
-
-[Install](https://docs.cucumber.io/installation/java/)
-
-## Bugs and Feature requests
-
-You can register bugs and feature requests in the [Github Issue Tracker](https://github.com/cucumber/cucumber-jvm/issues).
-
-You're most likely going to paste code and output, so familiarise yourself with
-[Github Flavored Markdown](https://help.github.com/articles/github-flavored-markdown) to make sure it remains readable.
-
-*At the very least - use triple backticks*:
-
-<pre>
-```java
-// Why doesn't this work?
-@Given("I have {int} cukes in my {string}")
-public void some_cukes(int howMany, String what) {
-    // HALP!
-}
-```
-</pre>
-
-Please consider including the following information if you register a ticket:
-
-* What cucumber-jvm version you're using
-* What modules you're using (`cucumber-java`, `cucumber-spring`, `cucumber-groovy` etc)
-* What command you ran
-* What output you saw
-* How it can be reproduced
-
-### How soon will my ticket be fixed?
-
-The best way to have a bug fixed or feature request implemented is to
-[fork the cucumber-jvm repo](http://help.github.com/fork-a-repo/) and send a
-[pull request](http://help.github.com/send-pull-requests/).
-If the pull request has good tests and follows the coding conventions (see below) it has a good chance of
-making it into the next release.
-
-If you don't fix the bug yourself (or pay someone to do it for you), the bug might never get fixed. If it is a serious
-bug, other people than you might care enough to provide a fix.
-
-In other words, there is no guarantee that a bug or feature request gets fixed. Tickets that are more than 6 months old
-are likely to be closed to keep the backlog manageable.
-
-## Contributing fixes
-
-See [CONTRIBUTING.md](https://github.com/cucumber/cucumber-jvm/blob/master/CONTRIBUTING.md)
+## Running the example
+### The short story
+cd ./examples/rcp-example-appl
+mvn clean verify
