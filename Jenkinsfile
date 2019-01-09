@@ -27,13 +27,11 @@ node {
 		 sh "cd cucumber-eclipse"
          sh "'${mvnHome}/bin/mvn' -e clean verify"
       } else {
-		 bat "
+		 bat """
 		 	cd cucumber-eclipse
-		 	dir
-		 	${mvnHome}\bin\mvn -e clean verify
-		 "
+		 	"${mvnHome}/bin/mvn" -e clean verify
+		 """
       }
-      
    }
    
    stage('RCP Example') {
@@ -42,12 +40,11 @@ node {
          sh "'${mvnHome}/bin/mvn' -e clean verify"
       } else {
 		 bat '''
-			dir
-			cd .\\examples\\rcp-example-appl
-			'${mvnHome}\\bin\\mvn' -e clean verify
+			cd examples\\rcp-example-appl
+			mvn -e clean verify
 		 '''
       }
       junit '**/target/surefire-reports/TEST-*.xml'
       archive 'target/*.jar'
 	}
-	}
+}
