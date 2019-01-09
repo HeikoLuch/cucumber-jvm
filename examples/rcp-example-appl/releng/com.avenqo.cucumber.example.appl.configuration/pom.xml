@@ -27,7 +27,11 @@
     <repository>
         <id>locale_p2_cucumber_eclipse</id> 
         
-        <url>file:/C:/projects/src.2018.4/cucumber-jvm-hko/cucumber-jvm/cucumber-eclipse/releng/io.cucumber.eclipse.update/target/repository</url>
+        <!-- Windows -->
+			<url>file:///${basedir}/../../cucumber-eclipse/releng/io.cucumber.eclipse.update/target/repository</url>
+			<!-- Linux
+			<url>file://${basedir}/../../../distribution-p2/target/repository</url>
+			-->
         <layout>p2</layout>
     </repository>
 
