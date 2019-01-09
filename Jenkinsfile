@@ -1,4 +1,5 @@
-﻿#!groovy
+#!groovy
+
 node {
    def mvnHome
    stage('Prepare') { // for display purposes
@@ -35,11 +36,11 @@ node {
 		 sh "cd ./examples/rcp-example-appl"
          sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
       } else {
-		 bat """
+		 bat '''
 			dir
-			cd .\examples\rcp-example-appl
-			"${mvnHome}\bin\mvn" clean verify
-		 """
+			cd .\\examples\\rcp-example-appl
+			'${mvnHome}\\bin\\mvn' clean verify
+		 '''
       }
       junit '**/target/surefire-reports/TEST-*.xml'
       archive 'target/*.jar'
