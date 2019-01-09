@@ -28,7 +28,7 @@
         <id>locale_p2_cucumber_eclipse</id> 
         
         <!-- Windows -->
-			<url>file:///${basedir}/../../../cucumber-eclipse/releng/io.cucumber.eclipse.update/target/repository</url>
+			<url>file:///${basedir}/../../../../cucumber-eclipse/releng/io.cucumber.eclipse.update/target/repository</url>
 			<!-- Linux
 			<url>file://${basedir}/../../../distribution-p2/target/repository</url>
 			-->
