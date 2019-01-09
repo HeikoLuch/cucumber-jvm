@@ -11,15 +11,15 @@ With Cucumber-JVM 3.0.0 the packaging of OSGI-bundles [has been stopped](https:/
 
 ## Building the project
 ### The short story
-checkout
-mvn clean install org.reficio:p2-maven-plugin:1.3.0:site -f pom_swtbot.xml
-cd cucumber-eclipse
-mvn clean verify
+* checkout
+* mvn clean install org.reficio:p2-maven-plugin:1.3.0:site -f pom_swtbot.xml
+* cd cucumber-eclipse
+* mvn clean verify
 
 You can find the created p2-repository in: 
 ./cucumber-eclipse/releng/io.cucumber.eclipse.update/target/repository
 
 ## Running the example
 ### The short story
-cd ./examples/rcp-example-appl
-mvn clean verify
+* cd ./examples/rcp-example-appl
+* mvn clean verify
