@@ -12,7 +12,6 @@ import cucumber.runtime.io.MultiLoader;
 import cucumber.runtime.io.ResourceLoader;
 import cucumber.runtime.io.ResourceLoaderClassFinder;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.Collections;
@@ -48,7 +47,6 @@ public class ThreadLocalRunnerSupplierTest {
     }
 
     @Test
-    @Ignore
     public void should_create_a_runner_per_thread() throws InterruptedException {
         final Runner[] runners = new Runner[2];
         Thread thread0 = new Thread(new Runnable() {

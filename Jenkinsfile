@@ -28,6 +28,7 @@ node {
          sh "'${mvnHome}/bin/mvn' -e clean verify"
       } else {
 		 bat(/cd cucumber-eclipse/)
+		 bat(/dir/)
          bat(/"${mvnHome}\bin\mvn" -e clean verify/)
       }
       
