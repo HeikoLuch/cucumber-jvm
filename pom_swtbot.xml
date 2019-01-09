@@ -36,7 +36,10 @@
 
 
 	<properties>
-		<!-- eclipse.repo.url>http://download.eclipse.org/eclipse/updates/4.9</eclipse.repo.url -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<enforcer.version>3.0.0-M2</enforcer.version>
+		<maven.surefire.version>2.22.1</maven.surefire.version>
+		<tycho.surefire.version>2.22.1</tycho.surefire.version>
 		<cucumber.version>4.2.1-SNAPSHOT</cucumber.version>
 		<gherkin.version>5.1.0</gherkin.version>
 		<groovy.version>2.5.4</groovy.version>
@@ -95,15 +98,8 @@
 		<url>git://github.com/cucumber/cucumber-jvm.git</url>
 		<tag>HEAD</tag>
 	</scm>
-<!-- 
-	<repositories>
-		<repository>
-			<id>eclipse-repo</id>
-			<url>${eclipse.repo.url}</url>
-			<layout>p2</layout>
-		</repository>
-	</repositories>
--->
+	<!-- <repositories> <repository> <id>eclipse-repo</id> <url>${eclipse.repo.url}</url> 
+		<layout>p2</layout> </repository> </repositories> -->
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -494,10 +490,8 @@
 		<module>core/pom_swtbot.xml</module>
 		<module>java/pom_swtbot.xml</module>
 		<module>junit/pom_swtbot.xml</module>
-		<!-- Fragments build by Tycho
-		<module>junit-eclipse/pom_swtbot.xml</module>
-		<module>core-eclipse/pom_swtbot.xml</module>
-		 -->
+		<!-- Fragments build by Tycho <module>junit-eclipse/pom_swtbot.xml</module> 
+			<module>core-eclipse/pom_swtbot.xml</module> -->
 		<module>distribution-p2/pom_swtbot.xml</module>
 	</modules>
 
@@ -599,7 +593,16 @@
 						</dependency>
 					</dependencies>
 				</plugin>
-
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+          
+        </configuration>
+      </plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-javadoc-plugin</artifactId>
@@ -632,18 +635,18 @@
 					<version>3.0.2</version>
 					<configuration combine.self="override" />
 				</plugin>
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-source-plugin</artifactId>
-      <executions>
-        <execution>
-          <id>attach-sources</id>
-          <goals>
-            <goal>jar</goal>
-          </goals>
-        </execution>
-      </executions>
-    </plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<executions>
+						<execution>
+							<id>attach-sources</id>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-war-plugin</artifactId>
@@ -715,12 +718,21 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
+				
+				<version>${enforcer.version}</version>
 				<executions>
 					<execution>
 						<id>enforce</id>
 						<goals>
 							<goal>enforce</goal>
 						</goals>
+						<configuration>
+							<rules>
+								<requireMavenVersion>
+									<version>3.6.0</version>
+								</requireMavenVersion>
+							</rules>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
