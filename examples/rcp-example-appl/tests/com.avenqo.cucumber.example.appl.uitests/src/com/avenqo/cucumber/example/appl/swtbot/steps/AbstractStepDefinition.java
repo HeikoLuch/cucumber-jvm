@@ -10,7 +10,7 @@ import com.avenqo.cucumber.example.appl.E4LifeCycle;
 
 import cucumber.runtime.CucumberException;
 
-abstract class AbstractStepDefinition {
+public abstract class AbstractStepDefinition {
 
 	private static SWTWorkbenchBot wbot;
 	private static SWTBot bot;

@@ -35,12 +35,7 @@ public class Reflections {
      * @return
      */
     public <T> Collection<? extends T> instantiateSubclasses(Class<T> parentType, List<String> packageNames, Class[] constructorParams, Object[] constructorArgs) {
-
-//TODO Remove
-if (parentType == Backend.class) {
-	int i=0; i++;
-}    	
-    	
+	
         Collection<T> result = new HashSet<T>();
         for (String packageName : packageNames) {
             for (Class<? extends T> clazz : classFinder.getDescendants(parentType, packageName)) {

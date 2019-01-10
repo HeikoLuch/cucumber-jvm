@@ -5,6 +5,7 @@
       <children xsi:type="advanced:Perspective" xmi:id="_Be0p8Ay6EemCntPWqnWXfw" elementId="com.avenqo.cucumber.example.appl.perspective.0">
         <children xsi:type="basic:PartSashContainer" xmi:id="_6wlLksgZEeSyMNYR5xypkQ" elementId="com.avenqo.cucumber.example.appl.partsashcontainer.sample">
           <children xsi:type="basic:PartStack" xmi:id="_6wlLk8gZEeSyMNYR5xypkQ" elementId="com.avenqo.cucumber.example.appl.partstack.sample">
+            <children xsi:type="basic:Part" xmi:id="_KVUZcBQhEemVk-nh_jRcZg" elementId="com.avenqo.cucumber.example.appl.part.calculator" contributionURI="bundleclass://com.avenqo.cucumber.example.appl/com.avenqo.cucumber.example.appl.parts.CalculatorPart" label="Calculator" iconURI="platform:/plugin/com.avenqo.cucumber.example.appl/icons/calculator.png"/>
             <children xsi:type="basic:Part" xmi:id="_6wlLlMgZEeSyMNYR5xypkQ" elementId="com.avenqo.cucumber.example.appl.part.sample" contributionURI="bundleclass://com.avenqo.cucumber.example.appl/com.avenqo.cucumber.example.appl.parts.SamplePart" label="Sample Part" iconURI="platform:/plugin/com.avenqo.cucumber.example.appl/icons/home.png"/>
           </children>
         </children>
