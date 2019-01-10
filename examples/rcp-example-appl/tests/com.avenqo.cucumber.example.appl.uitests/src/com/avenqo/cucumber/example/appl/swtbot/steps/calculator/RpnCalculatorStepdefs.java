@@ -25,20 +25,25 @@ public class RpnCalculatorStepdefs extends AbstractStepDefinition{
     public void a_calculator_I_just_turned_on() {
     	calculatorPageObject = new PageObjectCalculatorView (getWorkbenchBot());
     	calculatorPageObject.isStarted();
+    	assertEquals ("0.", calculatorPageObject.getDisplayValue());
     }
 
     @When("I add {int} and {int}")
     public void adding(int arg1, int arg2) {
+    	calculatorPageObject.enter (arg1);
+    	calculatorPageObject.pushPlus();
+    	calculatorPageObject.enter (arg2);
+    	calculatorPageObject.pushResult();
     }
 
     @Given("I press (.+)")
     public void I_press(String what) {
-     
+     System.out.println ("Pushed: " + what);
     }
 
     @Then("the result is {int}")
     public void the_result_is(double expected) {
-     
+    	assertEquals ((Double) expected, calculatorPageObject.getDisplayValueAsDouble());
     }
 
     @Before("not @foo")
