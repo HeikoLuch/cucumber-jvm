@@ -3,6 +3,8 @@
 node {
    def mvnHome
    stage('Prepare') { // for display purposes
+   	//clean WS
+   		deleteDir()
       // Get some code from a GitHub repository
       git 'https://github.com/HeikoLuch/cucumber4eclipse.git'
       // Get the Maven tool.
