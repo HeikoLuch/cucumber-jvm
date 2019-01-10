@@ -10,6 +10,8 @@ In contrast to Cucumber-JVM, SWTBot tests as well as Eclipse RCP Applications ar
 With Cucumber-JVM 3.0.0 the packaging of OSGI-bundles [has been stopped](https://github.com/cucumber/cucumber/issues/412).
 
 ## Building the project
+Please use Maven 3.6.
+
 ### The short story
 * checkout
 * mvn clean install org.reficio:p2-maven-plugin:1.3.0:site -f pom_swtbot.xml
@@ -23,3 +25,7 @@ You can find the created p2-repository in:
 ### The short story
 * cd ./examples/rcp-example-appl
 * mvn clean verify
+
+## Current restrictions
+This projects supports Eclipse RCP E4 Version 4.9 and above as well as SWTBot 2.7 and above.
+Currently there is no support for Java8 Lamda expressions.
