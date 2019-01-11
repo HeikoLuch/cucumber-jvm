@@ -11,5 +11,5 @@ import cucumber.api.junit.Cucumber;
 		glue = { "com.avenqo.cucumber.example.appl.swtbot.steps" }, 
 		plugin = { "progress", "json:target/cucumber-report.json" }, 
 		features = { "features-example-appl" })
-public class RunSWTBotTest {
+public class SWTBotTestRunner {
 }

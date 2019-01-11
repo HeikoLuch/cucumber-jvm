@@ -33,7 +33,7 @@
                     <application>org.eclipse.e4.ui.workbench.swt.E4Application</application>
                     
                      <includes>
-         				<include>**/RunSWTBotTest.java</include>
+         				<include>**/Run*Test.java</include>
       				 </includes>
       				 
                 </configuration>
