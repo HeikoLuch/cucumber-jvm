@@ -14,14 +14,16 @@ Feature: Basic Arithmetic
     When I add 4 and 7
     Then the result is 11
 
-  Scenario Outline: Many additions
-    Given the previous entries:
+  Scenario Outline: Many additions using memory
+    Given the memory is cleared
+    #And the previous entries:
+    And some calculations were performed and added to the memory
       | first | second | operation |
       | 1     | 1      | +         |
       | 2     | 1      | +         |
-    When I press +
-    And I add <a> and <b>
+    When I recall memory
     And I press +
+    And I add <a> and <b>
     Then the result is <c>
 
   Examples: Single digits
