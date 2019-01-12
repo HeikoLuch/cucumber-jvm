@@ -31,14 +31,12 @@ public class BundleResource implements Resource {
 
 	@Override
 	public String getAbsolutePath() {
-		// TODO Auto-generated method stub
-		return null;
+		throw new CucumberException("not implemented");
 	}
 
 	@Override
 	public InputStream getInputStream() throws IOException {
-		// TODO Auto-generated method stub
-		return null;
+		throw new CucumberException("not implemented");
 	}
 
 	@Override
@@ -46,7 +44,7 @@ public class BundleResource implements Resource {
 		
 		//URL hostUrl = bundle.getResource("/");
 		if (!url.toString().startsWith("bundle"))
-			throw new CucumberException("Don't kno how to handle URL: " + url);
+			throw new CucumberException("Don't know how to handle URL: " + url);
 		String p = url.getPath();
 		
 		String s = p.replaceAll("/", ".");

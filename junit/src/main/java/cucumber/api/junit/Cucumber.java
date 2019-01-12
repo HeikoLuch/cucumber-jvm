@@ -78,8 +78,6 @@ public class Cucumber extends ParentRunner<FeatureRunner> {
     public Cucumber(Class clazz) throws InitializationError {
         super(clazz);
         ClassLoader classLoader = clazz.getClassLoader();
-//TODO Remove
-System.out.println("===== ERROR: Bunlde loaded, not fragment ===");        
         Assertions.assertNoCucumberAnnotatedMethods(clazz);
 
         RuntimeOptionsFactory runtimeOptionsFactory = new RuntimeOptionsFactory(clazz);
