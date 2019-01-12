@@ -10,8 +10,8 @@ import org.osgi.framework.Bundle;
 import cucumber.runtime.CucumberException;
 
 /**
- * Provides an separate iterator containing one url.
- * Implemented for compatibility reasons only.
+ * Provides an separate iterator containing one url. Implemented for
+ * compatibility reasons only.
  * 
  * @author Heiko
  *
@@ -21,12 +21,12 @@ public class BundleResourceIterator implements Iterator<Resource> {
 	private final FlatteningIterator<Resource> flatteningIterator = new FlatteningIterator<Resource>();
 
 	/**
-	 * @param url    i.e.
-	 *               bundleentry://5.fwk1645547422/com/avenqo/cucumber/example/appl/swtbot/runner/RunCukesTest.class
+	 * @param url i.e.
+	 *            bundleentry://5.fwk1645547422/com/avenqo/cucumber/example/appl/swtbot/runner/RunCukesTest.class
 	 */
 	public BundleResourceIterator(URL url) {
 		List<Resource> listResources = new ArrayList<Resource>();
-		
+
 		BundleResourceAccessor bra = new BundleResourceAccessor();
 		Bundle bundle = bra.getBundle(url);
 

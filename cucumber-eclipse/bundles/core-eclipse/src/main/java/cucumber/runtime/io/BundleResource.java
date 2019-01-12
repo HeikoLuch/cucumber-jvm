@@ -12,17 +12,19 @@ public class BundleResource implements Resource {
 
 	private final URL url;
 	private Bundle bundle;
-	
 
-	public BundleResource(Bundle b,  URL u) {
+	public BundleResource(Bundle b, URL u) {
 		url = u;
 		bundle = b;
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see cucumber.runtime.io.Resource#getPath()
 	 * 
-	 * Returns i.e. "/bin/com/avenqo/cucumber/example/appl/swtbot/runner/RunCukesTest.class"
+	 * Returns i.e.
+	 * "/bin/com/avenqo/cucumber/example/appl/swtbot/runner/RunCukesTest.class"
 	 */
 	@Override
 	public String getPath() {
@@ -41,22 +43,21 @@ public class BundleResource implements Resource {
 
 	@Override
 	public String getClassName(String extension) {
-		
-		//URL hostUrl = bundle.getResource("/");
+
+		// URL hostUrl = bundle.getResource("/");
 		if (!url.toString().startsWith("bundle"))
 			throw new CucumberException("Don't know how to handle URL: " + url);
 		String p = url.getPath();
-		
+
 		String s = p.replaceAll("/", ".");
 		if (s.startsWith("."))
 			s = s.substring(1);
-		
+
 		if (s.endsWith(extension)) {
 			int index = s.lastIndexOf(extension);
-			s = s.substring(0,  index);
+			s = s.substring(0, index);
 		}
 		return s;
-
 
 	}
 

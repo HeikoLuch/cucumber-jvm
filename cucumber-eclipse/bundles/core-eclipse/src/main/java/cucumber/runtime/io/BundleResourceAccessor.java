@@ -82,7 +82,6 @@ public class BundleResourceAccessor {
 			// Get all known Bundles
 			alBundles = new ArrayList<Bundle>(Arrays.asList(bc.getBundles()));
 		} catch (BundleException be) {
-			be.printStackTrace(); // TODO: remove. is not necessary
 			throw new CucumberException(be);
 		}
 

@@ -12,9 +12,9 @@ public class BundleResourceIteratorFactory implements ResourceIteratorFactory {
 
 	@Override
 	public Iterator<Resource> createIterator(URL url, String path, String suffix) {
-		   
-           return new BundleResourceIterator(url);
-        
+
+		return new BundleResourceIterator(url);
+
 	}
 
 }

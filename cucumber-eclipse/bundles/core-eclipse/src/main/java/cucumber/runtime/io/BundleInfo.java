@@ -8,12 +8,12 @@ import org.osgi.framework.Bundle;
 
 public class BundleInfo {
 
-	private void printBundleInfo1(Bundle b) throws IOException {
+	public static void printBundleInfo1(Bundle b) throws IOException {
 
 		System.out.println("\n==== INFO: Current Bundle Symbolic Name '" + b.getSymbolicName() + " ====\n");
 
-		// Listet die eigenen Classen auf. Ausgabe bspw.
-		// findEntries('/', '*.class', true):
+		// Lists classes like this:
+		// findEntries('/', '*.class', true)
 		// bundleentry://30.fwk1302227152/cucumber/api/event/TestCaseFinished.class
 		//
 		System.out.println("  ---- Find entries ----");
@@ -23,7 +23,6 @@ public class BundleInfo {
 				URL url = urls.nextElement();
 				System.out.println("  findEntries('/', '*.class', true): " + url.toExternalForm());
 
-				// Versuche, den Filepath zu ermitteln
 				try {
 					String filepath = BundleHelpers.filePath(url);
 					System.out.println("     filepath = '" + filepath + "'");
@@ -38,7 +37,7 @@ public class BundleInfo {
 
 	}
 
-	private void printResources(Bundle b) throws IOException {
+	public static void printResources(Bundle b) throws IOException {
 
 		System.out.println("\n  ---- Get Resources ----");
 
@@ -54,7 +53,7 @@ public class BundleInfo {
 
 	}
 
-	private void printBundleState(Bundle b) {
+	public static void printBundleState(Bundle b) {
 		// Determine bundle state as string
 		int state = b.getState();
 		String strState = "";

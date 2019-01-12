@@ -16,7 +16,7 @@ import cucumber.runtime.CucumberException;
  * @author Heiko
  */
 public class BundleHelpers {
-	
+
 	private BundleHelpers() {
 	}
 
@@ -25,14 +25,13 @@ public class BundleHelpers {
 	}
 
 	static String filePath(URL fileUrl) {
-		//Added implementation vor OSGI environment
+		// Added implementation vor OSGI environment
 		String protocol = fileUrl.getProtocol();
 		System.out.println("Protocol is: " + protocol);
-		if ("bundleresource".equals(protocol)
-				|| "bundleentry".equals(fileUrl.getProtocol())) {
+		if ("bundleresource".equals(protocol) || "bundleentry".equals(fileUrl.getProtocol())) {
 			return getAbsolutePathAsString(fileUrl);
 
-		} else {	//The original implementation
+		} else { // The original implementation
 			if (!"file".equals(fileUrl.getProtocol())) {
 				throw new CucumberException("Expected a file URL: " + fileUrl);
 			}
@@ -59,8 +58,6 @@ public class BundleHelpers {
 		}
 	}
 
-
-	
 	private static String getAbsolutePathAsString(URL fileUrl) {
 		String sRet = null;
 		try {
@@ -69,8 +66,7 @@ public class BundleHelpers {
 			sRet = uri.getSchemeSpecificPart();
 			if (sRet.startsWith("file:/")) {
 				sRet = sRet.substring(5);
-			}
-			else
+			} else
 				throw new CucumberException("Don't know how to handle SchemeSpecificPart in URL: " + fileUrl);
 
 		} catch (Exception e) {

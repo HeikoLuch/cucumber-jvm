@@ -1,6 +1,5 @@
 package cucumber.api.junit;
 
-
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import org.eclipse.swtbot.swt.finder.junit.ScreenshotCaptureListener;
@@ -18,11 +17,8 @@ import org.junit.runner.notification.StoppedByUserException;
 public class ScreenshotCaptureNotifier extends RunNotifier {
 
 	private final ScreenshotCaptureListener screenshotCreator = new ScreenshotCaptureListener();
-
 	private final RunNotifier delegate;
-
 	private final AtomicBoolean screenshotTakenForTest = new AtomicBoolean();
-
 	private Failure testFailure;
 
 	public ScreenshotCaptureNotifier(RunNotifier notifier) {
@@ -33,8 +29,7 @@ public class ScreenshotCaptureNotifier extends RunNotifier {
 	/**
 	 * Capture a screenshot if none had been captured yet.
 	 *
-	 * @param failure
-	 *            that occurred
+	 * @param failure that occurred
 	 */
 	public void captureScreenshot(Failure failure) {
 		if (!screenshotTakenForTest.getAndSet(true)) {
@@ -114,4 +109,3 @@ public class ScreenshotCaptureNotifier extends RunNotifier {
 	}
 
 }
-
