@@ -6,7 +6,7 @@ node {
    	//clean WS
    		deleteDir()
       // Get some code from a GitHub repository
-      git 'https://github.com/HeikoLuch/cucumber4eclipse.git'
+      git 'https://github.com/avenqo/cucumber4eclipse.git'
       // Get the Maven tool.
       // ** NOTE: This 'M3' Maven tool must be configured
       // **       in the global configuration.           
