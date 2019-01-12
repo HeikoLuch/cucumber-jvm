@@ -4,9 +4,9 @@ import org.junit.Ignore;
 import org.junit.runner.RunWith;
 
 import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
+import cucumber.api.junit.Cucumber4Eclipse;
 
-@RunWith(Cucumber.class)
+@RunWith(Cucumber4Eclipse.class)
 @CucumberOptions(
 		glue = { "com.avenqo.cucumber.example.appl.swtbot.steps.calculator" }, 
 		plugin = { "progress", "json:target/cucumber-report.json" }, 
