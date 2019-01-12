@@ -71,7 +71,7 @@ Fail *
  *
  * @see CucumberOptions
  */
-public class Cucumber4Eclipse extends ParentRunner<FeatureRunner> {
+public class Cucumber extends ParentRunner<FeatureRunner> {
 	private final List<FeatureRunner> children = new ArrayList<FeatureRunner>();
 	private final EventBus bus;
 	private final ThreadLocalRunnerSupplier runnerSupplier;
@@ -85,7 +85,7 @@ public class Cucumber4Eclipse extends ParentRunner<FeatureRunner> {
 	 * @throws org.junit.runners.model.InitializationError if there is another
 	 *         problem
 	 */
-	public Cucumber4Eclipse(Class clazz) throws InitializationError {
+	public Cucumber(Class clazz) throws InitializationError {
 		super(clazz);
 		System.out.println("============================ Fragment loaded =======================================");
 		ClassLoader classLoader = clazz.getClassLoader();
