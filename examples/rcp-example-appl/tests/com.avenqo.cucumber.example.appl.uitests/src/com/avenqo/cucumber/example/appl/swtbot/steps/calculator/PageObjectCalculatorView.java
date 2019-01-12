@@ -13,7 +13,7 @@ public class PageObjectCalculatorView {
 
 	private static final Logger log = Logger.getLogger(PageObjectCalculatorView.class.getName());
 
-	private static final String PART_TITLE = "Sample Part";
+	private static final String PART_TITLE = "Calculator";
 
 	private SWTWorkbenchBot workbenchBot;
 
