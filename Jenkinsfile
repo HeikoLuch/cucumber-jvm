@@ -35,8 +35,9 @@ node {
 		 """
       }
       zip zipFile: 'cucumber4e.zip', archive: false, dir: 'cucumber-eclipse/releng/io.cucumber.eclipse.update/target/repository'
-      archiveArtifacts artifacts: 'cucumber4e.zip', fingerprint: true
+     
       archiveArtifacts allowEmptyArchive: true, onlyIfSuccessful: false, artifacts: '**/surefire-reports/*.xml,**/screenshots/**/*.png'
+      archiveArtifacts artifacts: 'cucumber4e.zip', fingerprint: true
    }
    
    stage('RCP Example') {
