@@ -36,7 +36,7 @@ node {
       }
       zip zipFile: 'cucumber4e.zip', archive: false, dir: 'cucumber-eclipse/releng/io.cucumber.eclipse.update/target/repository'
      
-      archiveArtifacts allowEmptyArchive: true, onlyIfSuccessful: false, artifacts: '**/surefire-reports/*.xml,**/screenshots/**/*.png'
+      archiveArtifacts allowEmptyArchive: true, onlyIfSuccessful: false, artifacts: '**/surefire-reports/*.xml'
       archiveArtifacts artifacts: 'cucumber4e.zip', fingerprint: true
    }
    
@@ -51,6 +51,10 @@ node {
 		 '''
       }
       junit '**/target/surefire-reports/TEST-*.xml'
+      
+      cucumber buildStatus: 'FAILURE', fileIncludePattern: '**/cucumber*.json', jsonReportDirectory: 'examples/rcp-example-appl/tests', parallelTesting: true, sortingMethod: 'ALPHABETICAL' 
+      
+      archiveArtifacts allowEmptyArchive: true, onlyIfSuccessful: false, artifacts: '**/surefire-reports/*.xml,**/screenshots/**/*.png'
       archive 'target/*.jar'
 	}
 }
