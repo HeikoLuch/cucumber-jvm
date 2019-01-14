@@ -5,17 +5,34 @@
       version="4.2.1.qualifier"
       provider-name="Avenqo GmbH, Germany">
 
-   <description url="http://www.example.com/description">
-      [Enter Feature Description here.]
+   <description url="https://github.com/avenqo/cucumber4eclipse">
+      A feature containing all plugins being necessary for &apos;Cucumber4Eclipse.&apos;
    </description>
 
    <copyright url="http://www.example.com/copyright">
-      [Enter Copyright Description here.]
+      Copyright (c) 2019 Avenqo GmbH, Germany
+All rights reserved.
    </copyright>
 
-   <license url="http://www.example.com/license">
-      [Enter License Description here.]
+   <license url="http://www.eclipse.org/legal/epl-v10.html">
+      This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v10.html
    </license>
+
+   <requires>
+      <import plugin="org.eclipse.osgi" version="3.13.100" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.equinox.common"/>
+      <import plugin="io.cucumber.core" version="4.2.1" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.swtbot.junit4_x"/>
+      <import plugin="org.junit" version="4.12.0" match="greaterOrEqual"/>
+      <import plugin="io.cucumber.junit" version="4.2.1" match="greaterOrEqual"/>
+      <import plugin="io.cucumber.gherkin" version="5.1.0" match="greaterOrEqual"/>
+      <import plugin="io.cucumber.datatable" version="1.1.7" match="greaterOrEqual"/>
+      <import plugin="io.cucumber.datatable-dependencies" version="1.1.7" match="greaterOrEqual"/>
+      <import plugin="io.cucumber.expressions" version="6.2.0" match="greaterOrEqual"/>
+      <import plugin="io.cucumber.html" version="0.2.7" match="greaterOrEqual"/>
+      <import plugin="io.cucumber.tag-expressions" version="1.1.1" match="greaterOrEqual"/>
+      <import plugin="org.hamcrest.core" version="1.3.0" match="greaterOrEqual"/>
+   </requires>
 
    <plugin
          id="io.cucumber.core.eclipse"

@@ -21,9 +21,5 @@
 			<unit id="org.mockito.source" version="1.9.5.v201605172210"/>
 			<repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20181128170323/repository"/>
 		</location>
-		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
-			
-			<repository location="http://download.eclipse.org/technology/swtbot/releases/2.7.0"/>
-		</location>
 	</locations>
 </target>

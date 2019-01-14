@@ -40,6 +40,7 @@ public class ClasspathResourceIterable implements Iterable<Resource> {
 
 			return iterator;
 		} catch (Exception e) {
+			e.printStackTrace();
 			throw new CucumberException(e);
 		}
 	}
