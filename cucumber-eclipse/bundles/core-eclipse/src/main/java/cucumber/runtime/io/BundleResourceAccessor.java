@@ -151,6 +151,13 @@ public class BundleResourceAccessor {
 		Vector<URL> vectorUrl = new Vector<URL>();
 		BundleWiring bundleWiring = bundle.adapt(BundleWiring.class);
 
+		if (bundleWiring == null) {
+			String s = "Bundle: " + (bundle!=null ? bundle.getSymbolicName() : "NULL");
+			s += ", Path: '" + path + "'";
+			s += ", Suffix: '" + suffix + "'";
+			throw new CucumberException("Bundlewiring is null; " + s);
+		}
+
 		// Getting all the matching files from classpath,; including imported packages
 		Collection<String> resources = null;
 		CacheKey key = new CacheKey(bundle, suffix);
