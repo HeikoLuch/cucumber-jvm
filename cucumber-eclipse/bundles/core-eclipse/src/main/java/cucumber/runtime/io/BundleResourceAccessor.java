@@ -149,13 +149,16 @@ public class BundleResourceAccessor {
 	public Enumeration<URL> findMatchingUrls(Bundle bundle, String path, String suffix) {
 
 		Vector<URL> vectorUrl = new Vector<URL>();
+		
 		BundleWiring bundleWiring = bundle.adapt(BundleWiring.class);
 
+		 // A bundle in the INSTALLED or UNINSTALLED state does not have a current wiring, adapting such a bundle returns null. 
 		if (bundleWiring == null) {
-			String s = "Bundle: " + (bundle!=null ? bundle.getSymbolicName() : "NULL");
-			s += ", Path: '" + path + "'";
-			s += ", Suffix: '" + suffix + "'";
-			throw new CucumberException("Bundlewiring is null; " + s);
+//			String s = "Bundle: " + (bundle!=null ? bundle.getSymbolicName() : "NULL");
+//			s += ", Path: '" + path + "'";
+//			s += ", Suffix: '" + suffix + "'";
+//			throw new CucumberException("BundleWiring is null; " + s);
+			return null;
 		}
 
 		// Getting all the matching files from classpath,; including imported packages
