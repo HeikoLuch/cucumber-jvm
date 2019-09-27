@@ -91,7 +91,7 @@
 	</properties>
 
 	<build>
-    	<sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+		<sourceDirectory>${basedir}/src/main/java</sourceDirectory>
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
@@ -99,6 +99,20 @@
 			</resource>
 		</resources>
 		<plugins>
+		
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
@@ -239,14 +253,12 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
-					<Bundle-ClassPath>patch.jar,.</Bundle-ClassPath>
-					<Eclipse-ExtensibleAPI>true</Eclipse-ExtensibleAPI>
-					<Bundle-Vendor>Avenqo GmbH, Germany</Bundle-Vendor>
-					<Bundle-ActivationPolicy>lazy</Bundle-ActivationPolicy>
-					<!-- 
-						<Export-Package>cucumber.runtime.*,cucumber.runner.*,cucumber.api.*,io.cucumber.*,cucumber.util</Export-Package>
-						<Import-Package>cucumber.runtime.*,cucumber.runner.*,cucumber.api.*,io.cucumber.*,gherkin.*,org.*</Import-Package>
-					-->
+						<Bundle-ClassPath>patch.jar,.</Bundle-ClassPath>
+						<Eclipse-ExtensibleAPI>true</Eclipse-ExtensibleAPI>
+						<Bundle-Vendor>Avenqo GmbH, Germany</Bundle-Vendor>
+						<Bundle-ActivationPolicy>lazy</Bundle-ActivationPolicy>
+						<!-- <Export-Package>cucumber.runtime.*,cucumber.runner.*,cucumber.api.*,io.cucumber.*,cucumber.util</Export-Package> 
+							<Import-Package>cucumber.runtime.*,cucumber.runner.*,cucumber.api.*,io.cucumber.*,gherkin.*,org.*</Import-Package> -->
 					</instructions>
 				</configuration>
 			</plugin>
