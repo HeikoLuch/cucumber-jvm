@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?pde version="3.5"?>
 
-<product name="Cucumber Example Product" uid="com.avenqo.cucumber.example.appl.product" id="com.avenqo.cucumber.example.appl.product" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+<product name="com.avenqo.cucumber.example.appl" uid="Cucumber Example Application" id="com.avenqo.cucumber.example.appl.product" application="org.eclipse.e4.ui.workbench.swt.E4Application" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
 
    <configIni use="default">
    </configIni>
@@ -68,6 +68,7 @@
       <plugin id="org.eclipse.equinox.app"/>
       <plugin id="org.eclipse.equinox.common"/>
       <plugin id="org.eclipse.equinox.concurrent"/>
+      <plugin id="org.eclipse.equinox.ds"/>
       <plugin id="org.eclipse.equinox.event"/>
       <plugin id="org.eclipse.equinox.preferences"/>
       <plugin id="org.eclipse.equinox.registry"/>
@@ -98,9 +99,9 @@
    </features>
 
    <configurations>
-      <plugin id="org.apache.felix.scr" autoStart="true" startLevel="3" />
-      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="2" />
-      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="3" />
+      <plugin id="org.eclipse.core.runtime" autoStart="false" startLevel="2" />
+      <plugin id="org.eclipse.equinox.ds" autoStart="false" startLevel="3" />
+      <plugin id="org.eclipse.equinox.event" autoStart="false" startLevel="3" />
    </configurations>
 
 </product>
