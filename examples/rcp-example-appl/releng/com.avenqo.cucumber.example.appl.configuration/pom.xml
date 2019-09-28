@@ -11,31 +11,27 @@
 		<eclipse-repo.url>http://download.eclipse.org/releases/photon</eclipse-repo.url>
 	</properties>
 
- 
-<repositories>
-    <repository>
-        <id>locale_p2_cucumber</id>
+
+	<repositories>
+		<repository>
+			<id>locale_p2_cucumber</id>
 			<!-- Windows -->
 			<url>file:///${basedir}/../../../../distribution-p2/target/repository</url>
-			<!-- Linux
-			<url>file://${basedir}/../../../distribution-p2/target/repository</url>
-			-->
-        <layout>p2</layout>
-    </repository>
- 
+			<!-- Linux <url>file://${basedir}/../../../distribution-p2/target/repository</url> -->
+			<layout>p2</layout>
+		</repository>
 
-    <repository>
-        <id>locale_p2_cucumber_eclipse</id> 
-        
-        <!-- Windows -->
+
+		<repository>
+			<id>locale_p2_cucumber_eclipse</id>
+
+			<!-- Windows -->
 			<url>file:///${basedir}/../../../../cucumber-eclipse/releng/io.cucumber.eclipse.update/target/repository</url>
-			<!-- Linux
-			<url>file://${basedir}/../../../distribution-p2/target/repository</url>
-			-->
-        <layout>p2</layout>
-    </repository>
+			<!-- Linux <url>file://${basedir}/../../../distribution-p2/target/repository</url> -->
+			<layout>p2</layout>
+		</repository>
 
-</repositories>
+	</repositories>
 
 	<build>
 		<plugins>
@@ -61,7 +57,14 @@
 					</execution>
 				</executions>
 			</plugin>
-
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-compiler-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+					<useProjectSettings>false</useProjectSettings>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>target-platform-configuration</artifactId>
@@ -83,62 +86,43 @@
 								<versionRange>0.0.0</versionRange>
 							</requirement>
 							<!-- This is only for usage of OSGI Console -->
- 
-        <requirement>
-          <type>eclipse-plugin</type>
-          <id>org.eclipse.equinox.console</id>
-          <versionRange>0.0.0</versionRange>
-        </requirement>
-        <requirement>
-          <type>eclipse-plugin</type>
-          <id>org.apache.felix.gogo.command</id>
-          <versionRange>0.0.0</versionRange>
-        </requirement>
-        <requirement>
-          <type>eclipse-plugin</type>
-          <id>org.apache.felix.gogo.runtime</id>
-          <versionRange>0.0.0</versionRange>
-        </requirement>
-        <requirement>
-          <type>eclipse-plugin</type>
-          <id>org.apache.felix.gogo.shell</id>
-          <versionRange>0.0.0</versionRange>
-        </requirement>
-        <!-- END: This is only for usage of OSGI Console -->
-        
+
+							<requirement>
+								<type>eclipse-plugin</type>
+								<id>org.eclipse.equinox.console</id>
+								<versionRange>0.0.0</versionRange>
+							</requirement>
+							<requirement>
+								<type>eclipse-plugin</type>
+								<id>org.apache.felix.gogo.command</id>
+								<versionRange>0.0.0</versionRange>
+							</requirement>
+							<requirement>
+								<type>eclipse-plugin</type>
+								<id>org.apache.felix.gogo.runtime</id>
+								<versionRange>0.0.0</versionRange>
+							</requirement>
+							<requirement>
+								<type>eclipse-plugin</type>
+								<id>org.apache.felix.gogo.shell</id>
+								<versionRange>0.0.0</versionRange>
+							</requirement>
+							<!-- END: This is only for usage of OSGI Console -->
+
 						</extraRequirements>
 					</dependency-resolution>
 
 					<environments>
-					<environment>
-							<os>win32</os>
-							<ws>win32</ws>
-							<arch>x86_64</arch>
-						</environment>
-<!--						
-<environment>
-							<os>linux</os>
-							<ws>gtk</ws>
-							<arch>x86_64</arch>
-						</environment>
-						<environment>
-							<os>linux</os>
-							<ws>gtk</ws>
-							<arch>x86</arch>
-						</environment>
-						
 						<environment>
 							<os>win32</os>
 							<ws>win32</ws>
-							<arch>x86</arch>
-						</environment>
-						
-						<environment>
-							<os>macosx</os>
-							<ws>cocoa</ws>
 							<arch>x86_64</arch>
 						</environment>
--->						
+						<!-- <environment> <os>linux</os> <ws>gtk</ws> <arch>x86_64</arch> 
+							</environment> <environment> <os>linux</os> <ws>gtk</ws> <arch>x86</arch> 
+							</environment> <environment> <os>win32</os> <ws>win32</ws> <arch>x86</arch> 
+							</environment> <environment> <os>macosx</os> <ws>cocoa</ws> <arch>x86_64</arch> 
+							</environment> -->
 					</environments>
 				</configuration>
 			</plugin>
