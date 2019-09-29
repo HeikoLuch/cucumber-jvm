@@ -33,8 +33,9 @@ Take a look to the provided Jenkinsfile. This implements the entire build proces
 
 ## Running the example
 ### The short story
-* cd ./examples/rcp-example-appl
-* mvn clean verify
+* cd ../examples/rcp-example-appl
+* mvn clean verify (Windows)
+* mvn clean verify -Pmacosx-jvm-flags(Windows)
 
 ### The long story
 The example is a RCP-appliaction implementing a calculator (similar to the calculator example of Cucumber-JVM).The tests are executed as GUI-Tests using SWTBot.
