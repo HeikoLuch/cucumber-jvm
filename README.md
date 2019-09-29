@@ -35,7 +35,7 @@ Take a look to the provided Jenkinsfile. This implements the entire build proces
 ### The short story
 * cd ../examples/rcp-example-appl
 * mvn clean verify (Windows)
-* mvn clean verify -Pmacosx-jvm-flags(Windows)
+* mvn clean verify -Pmacosx-jvm-flags (MacOS)
 
 ### The long story
 The example is a RCP-appliaction implementing a calculator (similar to the calculator example of Cucumber-JVM).The tests are executed as GUI-Tests using SWTBot.
@@ -43,5 +43,5 @@ The tests are provided by a test bundle (com.avenqo.cucumber.example.appl.uitest
 One note regarding the runner: The runner class **cucumber.api.junitCucumber** is a patched variant. In addition to Cucumber-JVM the class provides the same screenshot functionality as *SWTBotJunit4ClassRunner*. This means a screenshot is created (in directory *screenshots*) when a test has failed.
 
 ## Current restrictions
-* This projects supports Eclipse RCP E4 Version 4.9 and above as well as SWTBot 2.7 and above.
+* This projects supports Eclipse RCP E4 Version 4.13 and above as well as SWTBot 2.8 and above.
 * Currently there is no support for Java8 Lamda expressions available. Contributions are welcome.
